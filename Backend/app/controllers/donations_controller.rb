@@ -19,7 +19,7 @@ class DonationsController < ApplicationController
   def new
     @donation = Donation.new
   end
-
+  
   # GET /donations/1/edit
   def edit
   end

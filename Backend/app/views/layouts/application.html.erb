@@ -32,8 +32,14 @@
 
 <%else%>
 		<%if institution_signed_in?%>
-			logiran si kao institucija
-			<br> <%= link_to "logout", destroy_institution_session_path %>
+			logiran si kao institucija -- <b> <%= current_institution.email %> </b>
+			<br> 
+			<%= link_to "logout", destroy_institution_session_path %>
+
+			<br>
+			<%= link_to 'svi donori', '/donori' %>
+
+
 		<% else %>
 			<p>nisi ulogiran</p>
 			<br/> <%= link_to 'log in kao institucija', new_institution_session_path %>
