@@ -23,9 +23,6 @@
 	<li> <a href="/registracija">Registracija</a></li>
 </ul>
 
-
-
-
 <% if super_admin_signed_in? %>
 	<h1>   Logiran je <%= current_super_admin.email %> </h1>
 	<br> <%= link_to "logout", destroy_super_admin_session %>	
