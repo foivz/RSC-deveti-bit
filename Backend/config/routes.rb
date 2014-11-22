@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   resources :pages
 
 
+  #RUTE ZA DONACIJE
+  get 'donacije' => 'donations#index'
+  get 'dodaj' => 'donations#new'
+  
+
 
   as :institution do
     get "login", to: "devise/sessions#new"

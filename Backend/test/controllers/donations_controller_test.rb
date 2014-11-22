@@ -18,7 +18,7 @@ class DonationsControllerTest < ActionController::TestCase
 
   test "should create donation" do
     assert_difference('Donation.count') do
-      post :create, donation: { notes: @donation.notes, time: @donation.time }
+      post :create, donation: { blood_group_id: @donation.blood_group_id, institution_id: @donation.institution_id, notes: @donation.notes, time: @donation.time, user_id: @donation.user_id }
     end
 
     assert_redirected_to donation_path(assigns(:donation))
@@ -35,7 +35,7 @@ class DonationsControllerTest < ActionController::TestCase
   end
 
   test "should update donation" do
-    patch :update, id: @donation, donation: { notes: @donation.notes, time: @donation.time }
+    patch :update, id: @donation, donation: { blood_group_id: @donation.blood_group_id, institution_id: @donation.institution_id, notes: @donation.notes, time: @donation.time, user_id: @donation.user_id }
     assert_redirected_to donation_path(assigns(:donation))
   end
 

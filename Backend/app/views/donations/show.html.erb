@@ -10,5 +10,20 @@
   <%= @donation.notes %>
 </p>
 
+<p>
+  <strong>User:</strong>
+  <%= @donation.user_id %>
+</p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @donation.institution_id %>
+</p>
+
+<p>
+  <strong>Blood group:</strong>
+  <%= @donation.blood_group_id %>
+</p>
+
 <%= link_to 'Edit', edit_donation_path(@donation) %> |
 <%= link_to 'Back', donations_path %>

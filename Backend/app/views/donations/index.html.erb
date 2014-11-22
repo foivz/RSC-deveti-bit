@@ -5,6 +5,9 @@
     <tr>
       <th>Time</th>
       <th>Notes</th>
+      <th>User</th>
+      <th>Institution</th>
+      <th>Blood group</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +17,9 @@
       <tr>
         <td><%= donation.time %></td>
         <td><%= donation.notes %></td>
+        <td><%= donation.user_id %></td>
+        <td><%= donation.institution_id %></td>
+        <td><%= donation.blood_group_id %></td>
         <td><%= link_to 'Show', donation %></td>
         <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
         <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
