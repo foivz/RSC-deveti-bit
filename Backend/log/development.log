@@ -4592,3 +4592,854 @@ ActionController::ParameterMissing (param is missing or the value is empty: dona
   Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
   Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
   Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (96.1ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:26:13 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 16ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (78.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 17:27:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DonationsController#index as HTML
+  [1m[35mDonation Load (1.4ms)[0m  SELECT "donations".* FROM "donations"
+  Rendered donations/index.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 530ms (Views: 390.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 17:27:35 +0100
+Processing by DonationsController#index as HTML
+  [1m[36mDonation Load (0.0ms)[0m  [1mSELECT "donations".* FROM "donations"[0m
+  Rendered donations/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 167ms (Views: 166.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 17:27:35 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 17:27:35 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 17:27:35 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 17:27:35 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 17:27:36 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 17:27:36 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 17:27:36 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 17:27:36 +0100
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:27:40 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 0ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (91.3ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:29:20 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 0ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (78.1ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 17:31:10 +0100
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (78.1ms)
+  Rendered donations/new.html.erb within layouts/application (93.8ms)
+Completed 200 OK in 297ms (Views: 296.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:31:16 +0100
+Processing by DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"foZuL+TMG6fsRqeuTHaacZNEd6Z2BXghY/z6ZUsnWqo=", "donation"=>{"notes"=>"efwe", "user_id"=>"r", "institution_id"=>"2", "blood_group_id"=>"3"}, "commit"=>"Create Donation"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "donations" ("blood_group_id", "created_at", "institution_id", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["blood_group_id", 3], ["created_at", "2014-11-22 16:31:16.968506"], ["institution_id", 2], ["notes", "efwe"], ["updated_at", "2014-11-22 16:31:16.968506"], ["user_id", 0]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/donations/5
+Completed 302 Found in 78ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/donations/5" for 127.0.0.1 at 2014-11-22 17:31:17 +0100
+Processing by DonationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDonation Load (1.0ms)[0m  [1mSELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered donations/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 155ms (Views: 148.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 17:31:17 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 17:31:17 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 17:31:17 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 17:31:17 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 17:31:17 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 17:31:17 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 17:31:18 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 17:31:18 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 17:32:10 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 17:32:10 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 17:32:10 +0100
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:32:33 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 2ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (129.4ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 17:35:46 +0100
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (32.0ms)
+  Rendered donations/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 249ms (Views: 233.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 17:35:46 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 17:35:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 17:35:46 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 17:35:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 17:35:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 17:35:47 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 17:35:47 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 17:35:47 +0100
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:35:52 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 0ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (96.2ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:37:12 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 16ms
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (93.7ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:38:42 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 0ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (78.1ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:52:07 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 0ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (108.2ms)
+
+
+Started GET "/donations/1.json" for 127.0.0.1 at 2014-11-22 17:52:24 +0100
+Processing by DonationsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mDonation Load (2.0ms)[0m  SELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 17ms
+
+ActiveRecord::RecordNotFound (Couldn't find Donation with 'id'=1):
+  app/controllers/donations_controller.rb:67:in `set_donation'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (116.1ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:52:36 +0100
+Processing by DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"foZuL+TMG6fsRqeuTHaacZNEd6Z2BXghY/z6ZUsnWqo=", "donation"=>{"notes"=>"dewfwe", "user_id"=>"2", "institution_id"=>"3", "blood_group_id"=>"4"}, "commit"=>"Create Donation"}
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "donations" ("blood_group_id", "created_at", "institution_id", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["blood_group_id", 4], ["created_at", "2014-11-22 16:52:36.289510"], ["institution_id", 3], ["notes", "dewfwe"], ["updated_at", "2014-11-22 16:52:36.289510"], ["user_id", 2]]
+  [1m[36m (17.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/donations/6
+Completed 302 Found in 56ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/donations/6" for 127.0.0.1 at 2014-11-22 17:52:36 +0100
+Processing by DonationsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mDonation Load (2.0ms)[0m  SELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered donations/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 182ms (Views: 177.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 17:52:36 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 17:52:37 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 17:52:37 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 17:52:37 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 17:52:37 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 17:52:37 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 17:52:37 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 17:52:37 +0100
+
+
+Started GET "/donations/1.json" for 127.0.0.1 at 2014-11-22 17:52:41 +0100
+Processing by DonationsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mDonation Load (0.0ms)[0m  [1mSELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 31ms
+
+ActiveRecord::RecordNotFound (Couldn't find Donation with 'id'=1):
+  app/controllers/donations_controller.rb:67:in `set_donation'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (92.5ms)
+
+
+Started GET "/donations/1.json" for 127.0.0.1 at 2014-11-22 17:53:07 +0100
+Processing by DonationsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mDonation Load (1.0ms)[0m  SELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Donation with 'id'=1):
+  app/controllers/donations_controller.rb:67:in `set_donation'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (103.1ms)
+
+
+Started GET "/donations/6.json" for 127.0.0.1 at 2014-11-22 17:53:14 +0100
+Processing by DonationsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mDonation Load (1.0ms)[0m  [1mSELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered donations/show.json.jbuilder (20.0ms)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/donations/6.json" for 127.0.0.1 at 2014-11-22 17:53:19 +0100
+Processing by DonationsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[35mDonation Load (1.0ms)[0m  SELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered donations/show.json.jbuilder (2.0ms)
+Completed 200 OK in 26ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 17:53:49 +0100
+Processing by DonationsController#index as HTML
+  [1m[36mDonation Load (6.6ms)[0m  [1mSELECT "donations".* FROM "donations"[0m
+  Rendered donations/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 168ms (Views: 159.7ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 17:53:50 +0100
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (0.0ms)
+  Rendered donations/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 204ms (Views: 203.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/donations/" for 127.0.0.1 at 2014-11-22 17:54:52 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 0ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (78.1ms)
+
+
+Started POST "/donations/" for 127.0.0.1 at 2014-11-22 17:56:18 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 0ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (93.7ms)
+
+
+Started POST "/donations.json" for 127.0.0.1 at 2014-11-22 17:56:25 +0100
+Processing by DonationsController#create as JSON
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 4ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (137.1ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:56:30 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 3ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (119.1ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 17:59:36 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 0ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (140.7ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:00:05 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 4ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (125.1ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:01:03 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 0ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:72:in `donation_params'
+  app/controllers/donations_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (93.8ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:03:09 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 16ms
+
+NameError (uninitialized constant DonationsController::Member):
+  app/controllers/donations_controller.rb:44:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (125.0ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:03:38 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 10ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:81:in `donation_params'
+  app/controllers/donations_controller.rb:44:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (93.7ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:04:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 118ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:81:in `donation_params'
+  app/controllers/donations_controller.rb:44:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (109.4ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:06:27 +0100
+Processing by DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"foZuL+TMG6fsRqeuTHaacZNEd6Z2BXghY/z6ZUsnWqo=", "donation"=>{"notes"=>"wefe", "user_id"=>"3", "institution_id"=>"4", "blood_group_id"=>"45"}, "commit"=>"Create Donation"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "donations" ("blood_group_id", "created_at", "institution_id", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["blood_group_id", 45], ["created_at", "2014-11-22 17:06:27.422918"], ["institution_id", 4], ["notes", "wefe"], ["updated_at", "2014-11-22 17:06:27.422918"], ["user_id", 3]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/donations
+Completed 302 Found in 142ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 18:06:27 +0100
+Processing by DonationsController#index as HTML
+  [1m[36mDonation Load (2.0ms)[0m  [1mSELECT "donations".* FROM "donations"[0m
+  Rendered donations/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 365ms (Views: 360.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 18:06:28 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 18:06:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 18:06:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 18:06:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 18:06:28 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 18:06:28 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 18:06:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 18:06:28 +0100
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:09:17 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 0ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:81:in `donation_params'
+  app/controllers/donations_controller.rb:44:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (104.1ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:09:29 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 4ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:81:in `donation_params'
+  app/controllers/donations_controller.rb:44:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (133.1ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:10:31 +0100
+Processing by DonationsController#create as */*
+Can't verify CSRF token authenticity
+Completed 400 Bad Request in 3ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: donation):
+  app/controllers/donations_controller.rb:81:in `donation_params'
+  app/controllers/donations_controller.rb:44:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (103.0ms)
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 18:20:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DonationsController#index as HTML
+  [1m[35mDonation Load (2.0ms)[0m  SELECT "donations".* FROM "donations"
+  Rendered donations/index.html.erb within layouts/application (102.1ms)
+Completed 200 OK in 600ms (Views: 521.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 18:20:09 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 18:20:10 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 18:20:10 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 18:20:10 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 18:20:10 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 18:20:10 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 18:20:10 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 18:20:10 +0100
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:20:44 +0100
+Processing by DonationsController#create as */*
+  Parameters: {"donation"=>{"notes"=>"", "user_id"=>12, "institution_id"=>12, "blood_group_id"=>12}}
+Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "donations" ("blood_group_id", "created_at", "institution_id", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["blood_group_id", 12], ["created_at", "2014-11-22 17:20:44.125750"], ["institution_id", 12], ["notes", ""], ["updated_at", "2014-11-22 17:20:44.125750"], ["user_id", 12]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/donations
+Completed 302 Found in 63ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 18:20:44 +0100
+Processing by DonationsController#index as */*
+  [1m[35mDonation Load (1.0ms)[0m  SELECT "donations".* FROM "donations"
+  Rendered donations/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 186ms (Views: 185.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:20:55 +0100
+Processing by DonationsController#create as */*
+  Parameters: {"donation"=>{"notes"=>"", "user_id"=>"12", "institution_id"=>12, "blood_group_id"=>12}}
+Can't verify CSRF token authenticity
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "donations" ("blood_group_id", "created_at", "institution_id", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["blood_group_id", 12], ["created_at", "2014-11-22 17:20:55.378021"], ["institution_id", 12], ["notes", ""], ["updated_at", "2014-11-22 17:20:55.378021"], ["user_id", 12]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/donations
+Completed 302 Found in 27ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 18:20:55 +0100
+Processing by DonationsController#index as */*
+  [1m[35mDonation Load (1.0ms)[0m  SELECT "donations".* FROM "donations"
+  Rendered donations/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 177ms (Views: 174.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:21:08 +0100
+Processing by DonationsController#create as */*
+  Parameters: {"donation"=>{"notes"=>"", "user_id"=>"12", "institution_id"=>12, "blood_group_id"=>12}}
+Can't verify CSRF token authenticity
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "donations" ("blood_group_id", "created_at", "institution_id", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["blood_group_id", 12], ["created_at", "2014-11-22 17:21:08.687667"], ["institution_id", 12], ["notes", ""], ["updated_at", "2014-11-22 17:21:08.687667"], ["user_id", 12]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/donations
+Completed 302 Found in 30ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 18:21:08 +0100
+Processing by DonationsController#index as */*
+  [1m[35mDonation Load (1.0ms)[0m  SELECT "donations".* FROM "donations"
+  Rendered donations/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 234ms (Views: 231.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:21:41 +0100
+Processing by DonationsController#create as */*
+  Parameters: {"donation"=>{"notes"=>"", "user_id"=>"12", "institution_id"=>12, "blood_group_id"=>12}}
+Can't verify CSRF token authenticity
+  [1m[36m (15.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "donations" ("blood_group_id", "created_at", "institution_id", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["blood_group_id", 12], ["created_at", "2014-11-22 17:21:41.874029"], ["institution_id", 12], ["notes", ""], ["updated_at", "2014-11-22 17:21:41.874029"], ["user_id", 12]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/donations/11
+Completed 302 Found in 31ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/donations/11" for 127.0.0.1 at 2014-11-22 18:21:41 +0100
+Processing by DonationsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[35mDonation Load (0.0ms)[0m  SELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered donations/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 218ms (Views: 218.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:21:45 +0100
+Processing by DonationsController#create as */*
+  Parameters: {"donation"=>{"notes"=>"", "user_id"=>"12", "institution_id"=>122, "blood_group_id"=>12}}
+Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "donations" ("blood_group_id", "created_at", "institution_id", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["blood_group_id", 12], ["created_at", "2014-11-22 17:21:45.850633"], ["institution_id", 122], ["notes", ""], ["updated_at", "2014-11-22 17:21:45.850633"], ["user_id", 12]]
+  [1m[36m (25.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/donations/12
+Completed 302 Found in 43ms (ActiveRecord: 26.0ms)
+
+
+Started GET "/donations/12" for 127.0.0.1 at 2014-11-22 18:21:45 +0100
+Processing by DonationsController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[35mDonation Load (1.0ms)[0m  SELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered donations/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 156ms (Views: 149.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 18:21:58 +0100
+Processing by DonationsController#index as HTML
+  [1m[36mDonation Load (1.0ms)[0m  [1mSELECT "donations".* FROM "donations"[0m
+  Rendered donations/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 156ms (Views: 154.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 18:21:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 18:21:58 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 18:21:58 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 18:21:58 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 18:21:58 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 18:21:58 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 18:21:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 18:21:59 +0100
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:24:39 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DonationsController#create as */*
+  Parameters: {"donation"=>{"notes"=>"ddd", "user_id"=>"12", "institution_id"=>122, "blood_group_id"=>12}}
+Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "donations" ("blood_group_id", "created_at", "institution_id", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["blood_group_id", 12], ["created_at", "2014-11-22 17:24:39.994169"], ["institution_id", 122], ["notes", "ddd"], ["updated_at", "2014-11-22 17:24:39.994169"], ["user_id", 12]]
+  [1m[35m (15.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/donations/13
+Completed 302 Found in 141ms (ActiveRecord: 31.3ms)
+
+
+Started GET "/donations/13" for 127.0.0.1 at 2014-11-22 18:24:40 +0100
+Processing by DonationsController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mDonation Load (0.0ms)[0m  [1mSELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  Rendered donations/show.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 483ms (Views: 467.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 18:24:44 +0100
+Processing by DonationsController#create as */*
+  Parameters: {"donation"=>{"notes"=>"ddfffd", "user_id"=>"12", "institution_id"=>122, "blood_group_id"=>12}}
+Can't verify CSRF token authenticity
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "donations" ("blood_group_id", "created_at", "institution_id", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["blood_group_id", 12], ["created_at", "2014-11-22 17:24:44.112332"], ["institution_id", 122], ["notes", "ddfffd"], ["updated_at", "2014-11-22 17:24:44.112332"], ["user_id", 12]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/donations/14
+Completed 302 Found in 17ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/donations/14" for 127.0.0.1 at 2014-11-22 18:24:44 +0100
+Processing by DonationsController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mDonation Load (2.0ms)[0m  [1mSELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  Rendered donations/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 219ms (Views: 212.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 18:24:47 +0100
+Processing by DonationsController#index as HTML
+  [1m[35mDonation Load (2.0ms)[0m  SELECT "donations".* FROM "donations"
+  Rendered donations/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 256ms (Views: 251.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 18:24:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 18:24:48 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 18:24:48 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 18:24:48 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 18:24:48 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 18:24:48 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 18:24:48 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 18:24:48 +0100

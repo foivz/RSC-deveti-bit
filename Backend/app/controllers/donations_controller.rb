@@ -1,6 +1,9 @@
 class DonationsController < ApplicationController
   before_action :set_donation, only: [:show, :edit, :update, :destroy]
 
+
+  respond_to :html, :json
+
   # GET /donations
   # GET /donations.json
   def index
@@ -37,6 +40,7 @@ class DonationsController < ApplicationController
     end
   end
 
+  
   # PATCH/PUT /donations/1
   # PATCH/PUT /donations/1.json
   def update
