@@ -8773,3 +8773,1749 @@ Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:59 +0100
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:59 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to SrediNekaPolja (20141122200906)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (75.1ms)[0m  [1mALTER TABLE "donors" ADD COLUMN "gender" integer[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "donors" ADD COLUMN "dob" date
+  [1m[36m (39.0ms)[0m  [1mALTER TABLE "donations" DROP "time"[0m
+  [1m[35m (126.1ms)[0m  ALTER TABLE "address" ADD COLUMN "city" text
+PG::UndefinedTable: ERROR:  relation "address" does not exist
+: ALTER TABLE "address" ADD COLUMN "city" text
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to SrediNekaPolja (20141122200906)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "donors" ADD COLUMN "gender" integer[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "donors" ADD COLUMN "dob" date
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "donations" DROP "time"[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "addresses" ADD COLUMN "city" text
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "addresses" ADD COLUMN "state" text[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141122200906"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/donori" for 127.0.0.1 at 2014-11-22 21:23:54 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DonorsController#index as HTML
+  [1m[35mDonor Load (2.0ms)[0m  SELECT "donors".* FROM "donors"
+  Rendered donors/index.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 261ms (Views: 248.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 21:23:55 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 21:23:55 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 21:23:55 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 21:23:55 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 21:23:55 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 21:23:55 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 21:23:56 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 21:23:56 +0100
+
+
+Started GET "/donori" for 127.0.0.1 at 2014-11-22 21:24:49 +0100
+Processing by DonorsController#index as HTML
+  [1m[36mDonor Load (2.0ms)[0m  [1mSELECT "donors".* FROM "donors"[0m
+  Rendered donors/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 184ms (Views: 179.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 21:24:49 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 21:24:49 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 21:24:49 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 21:24:49 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 21:24:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 21:24:50 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 21:24:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 21:24:50 +0100
+
+
+Started GET "/donors/2/edit" for 127.0.0.1 at 2014-11-22 21:24:52 +0100
+Processing by DonorsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDonor Load (2.0ms)[0m  SELECT  "donors".* FROM "donors"  WHERE "donors"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered donors/_form.html.erb (19.0ms)
+  Rendered donors/edit.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 261ms (Views: 240.2ms | ActiveRecord: 3.0ms)
+
+
+Started PATCH "/donors/2" for 127.0.0.1 at 2014-11-22 21:24:55 +0100
+Processing by DonorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MvJ8FxBs9IqcYfUt1pVlvKDpyLGeHSh2gCQcLV7aQro=", "donor"=>{"first_name"=>"mario", "last_name"=>"123", "email"=>"mario2@deveti.hr", "push_reg_id"=>"123", "locked"=>"", "note"=>"", "password"=>"[FILTERED]", "gender"=>"", "dob"=>"", "date_of_last_donation"=>"edee"}, "commit"=>"Update Donor", "id"=>"2"}
+  [1m[36mDonor Load (1.0ms)[0m  [1mSELECT  "donors".* FROM "donors"  WHERE "donors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  Rendered donors/_form.html.erb (25.0ms)
+  Rendered donors/edit.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 264ms (Views: 248.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 21:24:56 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 21:24:56 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 21:24:56 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 21:24:56 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 21:24:56 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 21:24:56 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 21:24:56 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 21:24:56 +0100
+
+
+Started PATCH "/donors/2" for 127.0.0.1 at 2014-11-22 21:25:00 +0100
+Processing by DonorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MvJ8FxBs9IqcYfUt1pVlvKDpyLGeHSh2gCQcLV7aQro=", "donor"=>{"first_name"=>"mario", "last_name"=>"123", "email"=>"mario2@deveti.hr", "push_reg_id"=>"123", "locked"=>"", "note"=>"", "password"=>"[FILTERED]", "gender"=>"", "dob"=>"", "date_of_last_donation"=>"edee"}, "commit"=>"Update Donor", "id"=>"2"}
+  [1m[35mDonor Load (2.0ms)[0m  SELECT  "donors".* FROM "donors"  WHERE "donors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "donors" SET "encrypted_password" = $1, "updated_at" = $2 WHERE "donors"."id" = 2  [["encrypted_password", "$2a$10$umXS4vUvbH9C.hiyA11E7.gMd5cQ7oMCVCBwF8GoSdug.OE1P6w9."], ["updated_at", "2014-11-22 20:25:00.915282"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/donors/2
+Completed 302 Found in 347ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/donors/2" for 127.0.0.1 at 2014-11-22 21:25:00 +0100
+Processing by DonorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDonor Load (1.0ms)[0m  SELECT  "donors".* FROM "donors"  WHERE "donors"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered donors/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 156ms (Views: 150.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 21:25:01 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 21:25:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 21:25:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 21:25:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 21:25:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 21:25:01 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 21:25:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 21:25:01 +0100
+
+
+Started GET "/logout" for 127.0.0.1 at 2014-11-22 21:25:04 +0100
+Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 21:25:04 +0100
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 157ms (Views: 149.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donacije" for 127.0.0.1 at 2014-11-22 21:55:02 +0100
+Processing by DonationsController#index as HTML
+  [1m[36mDonation Load (3.0ms)[0m  [1mSELECT "donations".* FROM "donations"[0m
+  Rendered donations/index.html.erb within layouts/application (61.1ms)
+Completed 500 Internal Server Error in 86ms
+
+ActionView::Template::Error (undefined method `time' for #<Donation:0x4d7cfd8>):
+    15:   <tbody>
+    16:     <% @donations.each do |donation| %>
+    17:       <tr>
+    18:         <td><%= donation.time %></td>
+    19:         <td><%= donation.notes %></td>
+    20:         <td><%= donation.user_id %></td>
+    21:         <td><%= donation.institution_id %></td>
+  app/views/donations/index.html.erb:18:in `block in _app_views_donations_index_html_erb__457069129_40541868'
+  app/views/donations/index.html.erb:16:in `_app_views_donations_index_html_erb__457069129_40541868'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.1ms)
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 21:55:07 +0100
+Processing by DonationsController#index as HTML
+  [1m[35mDonation Load (1.0ms)[0m  SELECT "donations".* FROM "donations"
+  Rendered donations/index.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `time' for #<Donation:0x4cc8618>):
+    15:   <tbody>
+    16:     <% @donations.each do |donation| %>
+    17:       <tr>
+    18:         <td><%= donation.time %></td>
+    19:         <td><%= donation.notes %></td>
+    20:         <td><%= donation.user_id %></td>
+    21:         <td><%= donation.institution_id %></td>
+  app/views/donations/index.html.erb:18:in `block in _app_views_donations_index_html_erb__457069129_40541868'
+  app/views/donations/index.html.erb:16:in `_app_views_donations_index_html_erb__457069129_40541868'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.1ms)
+
+
+Started GET "/donacije" for 127.0.0.1 at 2014-11-22 21:55:34 +0100
+Processing by DonationsController#index as HTML
+  [1m[36mDonation Load (1.0ms)[0m  [1mSELECT "donations".* FROM "donations"[0m
+  Rendered donations/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined method `time' for #<Donation:0x3484aa0>):
+    15:   <tbody>
+    16:     <% @donations.each do |donation| %>
+    17:       <tr>
+    18:         <td><%= donation.time %></td>
+    19:         <td><%= donation.notes %></td>
+    20:         <td><%= donation.user_id %></td>
+    21:         <td><%= donation.institution_id %></td>
+  app/views/donations/index.html.erb:18:in `block in _app_views_donations_index_html_erb__457069129_40541868'
+  app/views/donations/index.html.erb:16:in `_app_views_donations_index_html_erb__457069129_40541868'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.1ms)
+
+
+Started GET "/donacije" for 127.0.0.1 at 2014-11-22 21:56:10 +0100
+Processing by DonationsController#index as HTML
+  [1m[35mDonation Load (1.0ms)[0m  SELECT "donations".* FROM "donations"
+  Rendered donations/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 244ms (Views: 240.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 21:56:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 21:56:11 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 21:56:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 21:56:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 21:56:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 21:56:11 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 21:56:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 21:56:11 +0100
+
+
+Started GET "/donations/3/edit" for 127.0.0.1 at 2014-11-22 21:56:45 +0100
+Processing by DonationsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDonation Load (1.0ms)[0m  [1mSELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered donations/_form.html.erb (10.0ms)
+  Rendered donations/edit.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 170ms (Views: 163.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:00:44 +0100
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (13.0ms)
+  Rendered donations/new.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    29:     <%= f.text_field :blood_group_id %>
+    30:   </div>
+    31: 
+    32:   <%= f.hidden_field :institution_id, :value => current_institution.id %>
+    33: 
+    34: 
+    35:   <div class="actions">
+  app/views/donations/_form.html.erb:32:in `block in _app_views_donations__form_html_erb___911275129_40480284'
+  app/views/donations/_form.html.erb:1:in `_app_views_donations__form_html_erb___911275129_40480284'
+  app/views/donations/new.html.erb:3:in `_app_views_donations_new_html_erb__704174588_40284072'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.1ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:00:45 +0100
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (12.0ms)
+  Rendered donations/new.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    29:     <%= f.text_field :blood_group_id %>
+    30:   </div>
+    31: 
+    32:   <%= f.hidden_field :institution_id, :value => current_institution.id %>
+    33: 
+    34: 
+    35:   <div class="actions">
+  app/views/donations/_form.html.erb:32:in `block in _app_views_donations__form_html_erb___911275129_40219572'
+  app/views/donations/_form.html.erb:1:in `_app_views_donations__form_html_erb___911275129_40219572'
+  app/views/donations/new.html.erb:3:in `_app_views_donations_new_html_erb__704174588_32715552'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.0ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:03:56 +0100
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (16.0ms)
+  Rendered donations/new.html.erb within layouts/application (22.0ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (undefined method `merge' for "":ActiveSupport::SafeBuffer):
+    29:     <%= f.text_field :blood_group_id %>
+    30:   </div>
+    31: 
+    32:   <%= f.hidden_field :institution_id, yield(:current_institution_id) %>
+    33: 
+    34: 
+    35:   <div class="actions">
+  app/views/donations/_form.html.erb:32:in `block in _app_views_donations__form_html_erb___911275129_40472724'
+  app/views/donations/_form.html.erb:1:in `_app_views_donations__form_html_erb___911275129_40472724'
+  app/views/donations/new.html.erb:3:in `_app_views_donations_new_html_erb__704174588_32715552'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (123.1ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:07:12 +0100
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (24.0ms)
+  Rendered donations/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 261ms (Views: 257.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:12 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:12 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:13 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:13 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:13 +0100
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-22 22:07:14 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 229ms (Views: 151.1ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/institutions/sign_in" for 127.0.0.1 at 2014-11-22 22:07:33 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MvJ8FxBs9IqcYfUt1pVlvKDpyLGeHSh2gCQcLV7aQro=", "institution"=>{"email"=>"123institucija@deveti.hr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mInstitution Load (3.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."email" = '123institucija@deveti.hr'  ORDER BY "institutions"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "institutions" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "institutions"."id" = 2  [["current_sign_in_at", "2014-11-22 21:07:34.274627"], ["last_sign_in_at", "2014-11-22 19:28:24.193000"], ["sign_in_count", 3], ["updated_at", "2014-11-22 21:07:34.278657"]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 368ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 22:07:34 +0100
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 131ms (Views: 129.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:34 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:35 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:35 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:35 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:35 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:35 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:35 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:35 +0100
+
+
+Started GET "/donacije" for 127.0.0.1 at 2014-11-22 22:07:41 +0100
+Processing by DonationsController#index as HTML
+  [1m[36mDonation Load (1.0ms)[0m  [1mSELECT "donations".* FROM "donations"[0m
+  Rendered donations/index.html.erb within layouts/application (17.0ms)
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 221ms (Views: 216.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:41 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:41 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:41 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:42 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:42 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:42 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:42 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:07:42 +0100
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:07:44 +0100
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (13.0ms)
+  Rendered donations/new.html.erb within layouts/application (21.0ms)
+  [1m[36mInstitution Load (2.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 221ms (Views: 217.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:49 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:49 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:07:49 +0100
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 22:08:11 +0100
+Processing by DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jfhmaJYqeYcGN+YR6w+WiPVbLvIyVOITbquzlbm8ybM=", "donation"=>{"notes"=>"qwd", "user_id"=>"wqd", "institution_id"=>"", "blood_group_id"=>"wd"}, "commit"=>"Create Donation"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "donations" ("blood_group_id", "created_at", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["blood_group_id", 0], ["created_at", "2014-11-22 21:08:11.499653"], ["notes", "qwd"], ["updated_at", "2014-11-22 21:08:11.499653"], ["user_id", 0]]
+  [1m[35m (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/donations/15
+Completed 302 Found in 13ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/donations/15" for 127.0.0.1 at 2014-11-22 22:08:11 +0100
+Processing by DonationsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mDonation Load (1.0ms)[0m  [1mSELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  Rendered donations/show.html.erb within layouts/application (1.0ms)
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 208ms (Views: 201.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:08:12 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:08:12 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:08:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:08:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:08:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:08:12 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:08:12 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:08:12 +0100
+
+
+Started GET "/donacije" for 127.0.0.1 at 2014-11-22 22:08:43 +0100
+Processing by DonationsController#index as HTML
+  [1m[36mDonation Load (1.0ms)[0m  [1mSELECT "donations".* FROM "donations"[0m
+  Rendered donations/index.html.erb within layouts/application (21.0ms)
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 243ms (Views: 238.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:08:44 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:08:44 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:08:44 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:08:44 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:08:44 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:08:44 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:08:44 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:08:44 +0100
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:08:46 +0100
+Processing by DonationsController#new as HTML
+  [1m[36mInstitution Load (2.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+  Rendered donations/_form.html.erb (22.0ms)
+  Rendered donations/new.html.erb within layouts/application (26.0ms)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (undefined method `merge' for 2:Fixnum):
+    25:     <%= f.text_field :blood_group_id %>
+    26:   </div>
+    27: 
+    28:   <%= f.hidden_field :institution_id, current_institution.id %>
+    29: 
+    30: 
+    31:   <div class="actions">
+  app/views/donations/_form.html.erb:28:in `block in _app_views_donations__form_html_erb___911275129_43478508'
+  app/views/donations/_form.html.erb:1:in `_app_views_donations__form_html_erb___911275129_43478508'
+  app/views/donations/new.html.erb:3:in `_app_views_donations_new_html_erb__704174588_40284072'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.0ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:08:46 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  Rendered donations/_form.html.erb (18.0ms)
+  Rendered donations/new.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (undefined method `merge' for 2:Fixnum):
+    25:     <%= f.text_field :blood_group_id %>
+    26:   </div>
+    27: 
+    28:   <%= f.hidden_field :institution_id, current_institution.id %>
+    29: 
+    30: 
+    31:   <div class="actions">
+  app/views/donations/_form.html.erb:28:in `block in _app_views_donations__form_html_erb___911275129_43498836'
+  app/views/donations/_form.html.erb:1:in `_app_views_donations__form_html_erb___911275129_43498836'
+  app/views/donations/new.html.erb:3:in `_app_views_donations_new_html_erb__704174588_32715552'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.1ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:09:01 +0100
+Processing by DonationsController#new as HTML
+  [1m[36mInstitution Load (2.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+  Rendered donations/_form.html.erb (19.0ms)
+  Rendered donations/new.html.erb within layouts/application (24.0ms)
+Completed 500 Internal Server Error in 41ms
+
+ActionView::Template::Error (undefined method `merge' for "2":String):
+    25:     <%= f.text_field :blood_group_id %>
+    26:   </div>
+    27: 
+    28:   <%= f.hidden_field :institution_id, current_institution.id.to_s %>
+    29: 
+    30: 
+    31:   <div class="actions">
+  app/views/donations/_form.html.erb:28:in `block in _app_views_donations__form_html_erb___911275129_40256664'
+  app/views/donations/_form.html.erb:1:in `_app_views_donations__form_html_erb___911275129_40256664'
+  app/views/donations/new.html.erb:3:in `_app_views_donations_new_html_erb__704174588_32715552'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.1ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:09:17 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  Rendered donations/_form.html.erb (21.0ms)
+  Rendered donations/new.html.erb within layouts/application (26.0ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (undefined method `merge' for 2:Fixnum):
+    25:     <%= f.text_field :blood_group_id %>
+    26:   </div>
+    27: 
+    28:   <%= f.hidden_field :institution_id, current_institution.id.to_i %>
+    29: 
+    30: 
+    31:   <div class="actions">
+  app/views/donations/_form.html.erb:28:in `block in _app_views_donations__form_html_erb___911275129_40470888'
+  app/views/donations/_form.html.erb:1:in `_app_views_donations__form_html_erb___911275129_40470888'
+  app/views/donations/new.html.erb:3:in `_app_views_donations_new_html_erb__704174588_32715552'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.1ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:10:39 +0100
+Processing by DonationsController#new as HTML
+  [1m[36mInstitution Load (2.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+  Rendered donations/_form.html.erb (24.0ms)
+  Rendered donations/new.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (undefined method `merge' for #<Institution:0x4d8e1e0>):
+    25:     <%= f.text_field :blood_group_id %>
+    26:   </div>
+    27: 
+    28:   <%= f.hidden_field :institution_id, current_institution %>
+    29: 
+    30: 
+    31:   <div class="actions">
+  app/views/donations/_form.html.erb:28:in `block in _app_views_donations__form_html_erb___911275129_40476144'
+  app/views/donations/_form.html.erb:1:in `_app_views_donations__form_html_erb___911275129_40476144'
+  app/views/donations/new.html.erb:3:in `_app_views_donations_new_html_erb__704174588_32715552'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.1ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:10:45 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  Rendered donations/_form.html.erb (14.0ms)
+  Rendered donations/new.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (undefined method `merge' for 2:Fixnum):
+    25:     <%= f.text_field :blood_group_id %>
+    26:   </div>
+    27: 
+    28:   <%= f.hidden_field :institution_id, current_institution.id %>
+    29: 
+    30: 
+    31:   <div class="actions">
+  app/views/donations/_form.html.erb:28:in `block in _app_views_donations__form_html_erb___911275129_40262016'
+  app/views/donations/_form.html.erb:1:in `_app_views_donations__form_html_erb___911275129_40262016'
+  app/views/donations/new.html.erb:3:in `_app_views_donations_new_html_erb__704174588_32715552'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (98.0ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:11:36 +0100
+Processing by DonationsController#new as HTML
+  [1m[36mInstitution Load (2.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+  Rendered donations/_form.html.erb (19.0ms)
+  Rendered donations/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 249ms (Views: 243.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:11:36 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:11:36 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:11:36 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:11:36 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:11:37 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:11:37 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:11:37 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:11:37 +0100
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:12:32 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  Rendered donations/_form.html.erb (12.0ms)
+  Rendered donations/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 185ms (Views: 182.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:12:32 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:12:32 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:12:32 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:12:32 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:12:32 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:12:32 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:12:32 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:12:33 +0100
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:12:34 +0100
+Processing by DonationsController#new as HTML
+  [1m[36mInstitution Load (1.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+  Rendered donations/_form.html.erb (16.0ms)
+  Rendered donations/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 254ms (Views: 249.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:12:36 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  Rendered donations/_form.html.erb (13.0ms)
+  Rendered donations/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 184ms (Views: 181.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/donori" for 127.0.0.1 at 2014-11-22 22:12:37 +0100
+Processing by DonorsController#index as HTML
+  [1m[36mDonor Load (1.0ms)[0m  [1mSELECT "donors".* FROM "donors"[0m
+  Rendered donors/index.html.erb within layouts/application (12.0ms)
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 169ms (Views: 166.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:12:39 +0100
+Processing by DonationsController#new as HTML
+  [1m[36mInstitution Load (1.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+  Rendered donations/_form.html.erb (12.0ms)
+  Rendered donations/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 166ms (Views: 162.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/donori" for 127.0.0.1 at 2014-11-22 22:12:41 +0100
+Processing by DonorsController#index as HTML
+  [1m[35mDonor Load (1.0ms)[0m  SELECT "donors".* FROM "donors"
+  Rendered donors/index.html.erb within layouts/application (8.0ms)
+  [1m[36mInstitution Load (1.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 220ms (Views: 217.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/donori" for 127.0.0.1 at 2014-11-22 22:12:59 +0100
+Processing by DonorsController#index as HTML
+  [1m[35mDonor Load (1.0ms)[0m  SELECT "donors".* FROM "donors"
+  Rendered donors/index.html.erb within layouts/application (12.0ms)
+  [1m[36mInstitution Load (1.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 232ms (Views: 228.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:13:00 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:13:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:13:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:00 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:00 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:00 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 22:13:03 +0100
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 153ms (Views: 151.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:13:04 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:13:04 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:13:04 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:04 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:04 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:04 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:04 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:04 +0100
+
+
+Started GET "/logout" for 127.0.0.1 at 2014-11-22 22:13:15 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mInstitution Load (1.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 22:13:15 +0100
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 210ms (Views: 207.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-22 22:13:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 234ms (Views: 231.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/institutions/sign_in" for 127.0.0.1 at 2014-11-22 22:13:31 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"neE+7c223kZ6+0FZ7EFgkWlZOb0r3PUVXgcIsnVdaEg=", "institution"=>{"email"=>"123institucija@deveti.hr", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."email" = '123institucija@deveti.hr'  ORDER BY "institutions"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "institutions" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "institutions"."id" = 2  [["remember_created_at", "2014-11-22 21:13:31.823851"], ["updated_at", "2014-11-22 21:13:31.825859"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "institutions" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "institutions"."id" = 2[0m  [["current_sign_in_at", "2014-11-22 21:13:31.848871"], ["last_sign_in_at", "2014-11-22 21:07:34.274627"], ["sign_in_count", 4], ["updated_at", "2014-11-22 21:13:31.850898"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 364ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 22:13:31 +0100
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+  [1m[36mInstitution Load (1.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 220ms (Views: 217.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:13:32 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:13:32 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:13:32 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:32 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:32 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:32 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:32 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:13:33 +0100
+
+
+Started GET "/donori" for 127.0.0.1 at 2014-11-22 22:13:36 +0100
+Processing by DonorsController#index as HTML
+  [1m[35mDonor Load (1.0ms)[0m  SELECT "donors".* FROM "donors"
+  Rendered donors/index.html.erb within layouts/application (8.0ms)
+  [1m[36mInstitution Load (1.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 199ms (Views: 195.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/donors/new" for 127.0.0.1 at 2014-11-22 22:13:49 +0100
+Processing by DonorsController#new as HTML
+  Rendered donors/_form.html.erb (17.0ms)
+  Rendered donors/new.html.erb within layouts/application (26.0ms)
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 206ms (Views: 202.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/donori" for 127.0.0.1 at 2014-11-22 22:13:52 +0100
+Processing by DonorsController#index as HTML
+  [1m[36mDonor Load (1.0ms)[0m  [1mSELECT "donors".* FROM "donors"[0m
+  Rendered donors/index.html.erb within layouts/application (9.0ms)
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 166ms (Views: 162.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:13:53 +0100
+Processing by DonationsController#new as HTML
+  [1m[36mInstitution Load (2.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+  Rendered donations/_form.html.erb (11.0ms)
+  Rendered donations/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 139ms (Views: 136.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 22:14:00 +0100
+Processing by DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z+6AF596eQy9AX/j+4JnPAJE1HAMaa5+itQvyM1/wXc=", "donation"=>{"notes"=>"efwfe", "user_id"=>"2", "blood_group_id"=>"2"}, "institution_id"=>"2", "commit"=>"Create Donation"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "donations" ("blood_group_id", "created_at", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["blood_group_id", 2], ["created_at", "2014-11-22 21:14:00.304328"], ["notes", "efwfe"], ["updated_at", "2014-11-22 21:14:00.304328"], ["user_id", 2]]
+  [1m[35m (68.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/donations/16
+Completed 302 Found in 82ms (ActiveRecord: 69.1ms)
+
+
+Started GET "/donations/16" for 127.0.0.1 at 2014-11-22 22:14:00 +0100
+Processing by DonationsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mDonation Load (2.0ms)[0m  [1mSELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  Rendered donations/show.html.erb within layouts/application (0.0ms)
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 229ms (Views: 222.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:14:00 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:14:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:14:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:14:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:14:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:14:01 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:14:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:14:01 +0100
+
+
+Started GET "/donations/" for 127.0.0.1 at 2014-11-22 22:14:04 +0100
+Processing by DonationsController#index as HTML
+  [1m[36mDonation Load (1.0ms)[0m  [1mSELECT "donations".* FROM "donations"[0m
+  Rendered donations/index.html.erb within layouts/application (18.0ms)
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 158ms (Views: 154.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:14:05 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:14:05 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:14:05 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:14:05 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:14:05 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:14:05 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:14:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:14:05 +0100
+
+
+Started GET "/donations/" for 127.0.0.1 at 2014-11-22 22:17:56 +0100
+Processing by DonationsController#index as HTML
+  [1m[36mDonation Load (1.0ms)[0m  [1mSELECT "donations".* FROM "donations"[0m
+  Rendered donations/index.html.erb within layouts/application (26.0ms)
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 296ms (Views: 290.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:17:56 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:17:56 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:17:56 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:17:56 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:17:56 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:17:56 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:17:57 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:17:57 +0100
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:18:04 +0100
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (27.0ms)
+  Rendered donations/new.html.erb within layouts/application (31.0ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (undefined method `institution_logged_in?' for #<#<Class:0x4d34f30>:0x3483108>):
+    1: <% if institution_logged_in? %>
+    2: 
+    3: 
+    4: <%= form_for(@donation) do |f| %>
+  app/views/donations/_form.html.erb:1:in `_app_views_donations__form_html_erb___911275129_32786820'
+  app/views/donations/new.html.erb:3:in `_app_views_donations_new_html_erb__704174588_32715552'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.1ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:18:47 +0100
+Processing by DonationsController#new as HTML
+  [1m[36mInstitution Load (2.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+  Rendered donations/_form.html.erb (16.0ms)
+  Rendered donations/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 247ms (Views: 243.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:18:48 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:18:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:18:48 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:18:48 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:18:48 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:18:48 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:18:48 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:18:48 +0100
+
+
+Started GET "/logout" for 127.0.0.1 at 2014-11-22 22:18:50 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "institutions" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "institutions"."id" = 2  [["remember_created_at", nil], ["updated_at", "2014-11-22 21:18:50.670296"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 22:18:50 +0100
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 221ms (Views: 219.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-22 22:18:53 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 183ms (Views: 180.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-22 22:23:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 210ms (Views: 206.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/institutions/sign_in" for 127.0.0.1 at 2014-11-22 22:23:42 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CRIOUQMA+8B9zNUOSaBZcS7gPl4hhvXp4z6UwpZStUY=", "institution"=>{"email"=>"123institucija@deveti.hr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."email" = '123institucija@deveti.hr'  ORDER BY "institutions"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "institutions" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "institutions"."id" = 2  [["current_sign_in_at", "2014-11-22 21:23:42.397269"], ["last_sign_in_at", "2014-11-22 21:13:31.848871"], ["sign_in_count", 5], ["updated_at", "2014-11-22 21:23:42.400277"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 338ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 22:23:42 +0100
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 155ms (Views: 152.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:23:42 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:23:43 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:23:43 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:23:43 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:23:43 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:23:43 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:23:43 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:23:43 +0100
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:23:46 +0100
+Processing by DonationsController#new as HTML
+  [1m[36mInstitution Load (1.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+  Rendered donations/_form.html.erb (14.0ms)
+  Rendered donations/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 218ms (Views: 215.2ms | ActiveRecord: 1.0ms)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (33.0ms)[0m  INSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-22 21:29:49.003827"], ["group", "A"], ["updated_at", "2014-11-22 21:29:49.003827"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-22 21:30:19.391525"], ["group", "A+"], ["updated_at", "2014-11-22 21:30:19.391525"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-22 21:30:19.419545"], ["group", "A-"], ["updated_at", "2014-11-22 21:30:19.419545"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-22 21:30:19.420543"], ["group", "B+"], ["updated_at", "2014-11-22 21:30:19.420543"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-22 21:30:19.421544"], ["group", "B-"], ["updated_at", "2014-11-22 21:30:19.421544"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-22 21:30:19.423547"], ["group", "AB+"], ["updated_at", "2014-11-22 21:30:19.423547"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-22 21:30:19.424548"], ["group", "AB-"], ["updated_at", "2014-11-22 21:30:19.424548"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[35mBloodGroup Load (2.0ms)[0m  SELECT "blood_groups".* FROM "blood_groups"
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "blood_groups"[0m
+  [1m[35mBloodGroup Load (1.0ms)[0m  SELECT "blood_groups".* FROM "blood_groups"
+  [1m[36mBloodGroup Load (1.0ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups"[0m
+  [1m[35mBloodGroup Load (1.0ms)[0m  SELECT "blood_groups".* FROM "blood_groups"
+  [1m[36mBloodGroup Load (1.0ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups"[0m
+  [1m[35mBloodGroup Load (2.0ms)[0m  SELECT "blood_groups".* FROM "blood_groups"
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "blood_groups" WHERE "blood_groups"."id" = $1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "blood_groups" WHERE "blood_groups"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "blood_groups" WHERE "blood_groups"."id" = $1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "blood_groups" WHERE "blood_groups"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "blood_groups" WHERE "blood_groups"."id" = $1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "blood_groups" WHERE "blood_groups"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "blood_groups" WHERE "blood_groups"."id" = $1  [["id", 7]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "blood_groups"
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-22 21:32:29.844228"], ["group", "A+"], ["updated_at", "2014-11-22 21:32:29.844228"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-22 21:32:29.877252"], ["group", "A-"], ["updated_at", "2014-11-22 21:32:29.877252"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-22 21:32:29.879254"], ["group", "B+"], ["updated_at", "2014-11-22 21:32:29.879254"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-22 21:32:29.881255"], ["group", "B-"], ["updated_at", "2014-11-22 21:32:29.881255"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-22 21:32:29.883256"], ["group", "AB+"], ["updated_at", "2014-11-22 21:32:29.883256"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-22 21:32:29.885258"], ["group", "AB-"], ["updated_at", "2014-11-22 21:32:29.885258"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:36:17 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  [1m[36mBloodGroup Load (2.0ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups"[0m
+  Rendered donations/_form.html.erb (71.0ms)
+  Rendered donations/new.html.erb within layouts/application (77.1ms)
+Completed 200 OK in 313ms (Views: 299.3ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:36:18 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:36:18 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:36:18 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:36:18 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:36:18 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:36:18 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:36:18 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:36:18 +0100
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-22 22:36:19 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 22:36:19 +0100
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  [1m[36mInstitution Load (0.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 167ms (Views: 164.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:36:23 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  [1m[36mBloodGroup Load (0.0ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups"[0m
+  Rendered donations/_form.html.erb (19.0ms)
+  Rendered donations/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 211ms (Views: 208.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:36:32 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  [1m[36mBloodGroup Load (1.0ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups"[0m
+  Rendered donations/_form.html.erb (18.0ms)
+  Rendered donations/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 257ms (Views: 251.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:36:33 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:36:33 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:36:33 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:36:33 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:36:33 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:36:33 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:36:33 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:36:33 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:36:48 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:36:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:36:48 +0100
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:37:29 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  [1m[36mBloodGroup Load (1.0ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups"[0m
+  Rendered donations/_form.html.erb (21.0ms)
+  Rendered donations/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 255ms (Views: 249.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:37:29 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:37:29 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:37:29 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:37:29 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:37:29 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:37:29 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:37:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:37:30 +0100
+  [1m[36m (51.0ms)[0m  [1mALTER SEQUENCE blood_groups_id_seq RESTART WITH 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-22 21:45:44.439417"], ["group", "A+"], ["updated_at", "2014-11-22 21:45:44.439417"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (15.6ms)[0m  [1mINSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-22 21:45:44.468543"], ["group", "A-"], ["updated_at", "2014-11-22 21:45:44.468543"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-22 21:45:44.485272"], ["group", "B+"], ["updated_at", "2014-11-22 21:45:44.485272"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-22 21:45:44.487276"], ["group", "B-"], ["updated_at", "2014-11-22 21:45:44.487276"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-22 21:45:44.489277"], ["group", "AB+"], ["updated_at", "2014-11-22 21:45:44.489277"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blood_groups" ("created_at", "group", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-22 21:45:44.492281"], ["group", "AB-"], ["updated_at", "2014-11-22 21:45:44.492281"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:45:49 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  [1m[36mBloodGroup Load (1.0ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups"[0m
+  Rendered donations/_form.html.erb (106.1ms)
+  Rendered donations/new.html.erb within layouts/application (218.1ms)
+Completed 200 OK in 390ms (Views: 360.3ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:45:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:45:50 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:45:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:45:50 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:45:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:45:50 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:45:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:45:51 +0100
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:46:01 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (1.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  [1m[36mBloodGroup Load (1.0ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups"[0m
+  Rendered donations/_form.html.erb (19.0ms)
+  Rendered donations/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 244ms (Views: 239.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:46:02 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:46:02 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:46:02 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:02 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:02 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:02 +0100
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:46:23 +0100
+Processing by DonationsController#new as HTML
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+  [1m[36mBloodGroup Load (1.0ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups"[0m
+  Rendered donations/_form.html.erb (20.0ms)
+  Rendered donations/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 234ms (Views: 227.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:46:24 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:46:24 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:46:24 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:24 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:24 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:24 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:24 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:24 +0100
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 22:46:32 +0100
+Processing by DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fEvh/VtyEkJZU230mptpdEbTsVR8ZDbkHMwZ+FAHEUw=", "donation"=>{"notes"=>"wdqdwq", "user_id"=>"2", "blood_group_id"=>"5"}, "institution_id"=>"2", "commit"=>"Create Donation"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "donations" ("blood_group_id", "created_at", "notes", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["blood_group_id", 5], ["created_at", "2014-11-22 21:46:32.852850"], ["notes", "wdqdwq"], ["updated_at", "2014-11-22 21:46:32.852850"], ["user_id", 2]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/donations/17
+Completed 302 Found in 15ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/donations/17" for 127.0.0.1 at 2014-11-22 22:46:32 +0100
+Processing by DonationsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mDonation Load (1.0ms)[0m  [1mSELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  Rendered donations/show.html.erb within layouts/application (0.0ms)
+  [1m[35mInstitution Load (2.0ms)[0m  SELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1
+Completed 200 OK in 217ms (Views: 210.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:46:33 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:46:33 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:46:33 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:33 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:33 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:33 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:33 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:46:33 +0100
+
+
+Started GET "/donations/new" for 127.0.0.1 at 2014-11-22 22:47:06 +0100
+Processing by DonationsController#new as HTML
+  [1m[36mInstitution Load (2.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+  [1m[35mBloodGroup Load (1.0ms)[0m  SELECT "blood_groups".* FROM "blood_groups"
+  Rendered donations/_form.html.erb (58.0ms)
+  Rendered donations/new.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 210ms (Views: 205.2ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/donations" for 127.0.0.1 at 2014-11-22 22:47:13 +0100
+Processing by DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fEvh/VtyEkJZU230mptpdEbTsVR8ZDbkHMwZ+FAHEUw=", "donation"=>{"notes"=>"fwefw", "blood_group_id"=>"10"}, "institution_id"=>"2", "user_id"=>"", "commit"=>"Create Donation"}
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "donations" ("blood_group_id", "created_at", "notes", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["blood_group_id", 10], ["created_at", "2014-11-22 21:47:13.548691"], ["notes", "fwefw"], ["updated_at", "2014-11-22 21:47:13.548691"]]
+  [1m[36m (15.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/donations/18
+Completed 302 Found in 30ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/donations/18" for 127.0.0.1 at 2014-11-22 22:47:13 +0100
+Processing by DonationsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mDonation Load (1.0ms)[0m  SELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1  [["id", 18]]
+  Rendered donations/show.html.erb within layouts/application (0.0ms)
+  [1m[36mInstitution Load (1.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 178ms (Views: 173.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:47:14 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:47:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:47:14 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:47:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:47:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:47:14 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:47:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:47:14 +0100
+
+
+Started GET "/donations/" for 127.0.0.1 at 2014-11-22 22:47:18 +0100
+Processing by DonationsController#index as HTML
+  [1m[35mDonation Load (1.0ms)[0m  SELECT "donations".* FROM "donations"
+  Rendered donations/index.html.erb within layouts/application (22.0ms)
+  [1m[36mInstitution Load (1.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 224ms (Views: 220.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:47:19 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:47:19 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:47:19 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:47:19 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:47:19 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:47:19 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:47:19 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:47:19 +0100
+
+
+Started GET "/donations/index" for 127.0.0.1 at 2014-11-22 22:47:56 +0100
+Processing by DonationsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mDonation Load (1.0ms)[0m  SELECT  "donations".* FROM "donations"  WHERE "donations"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Donation with 'id'=index):
+  app/controllers/donations_controller.rb:71:in `set_donation'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (103.1ms)
+
+
+Started GET "/donations.json" for 127.0.0.1 at 2014-11-22 22:48:03 +0100
+Processing by DonationsController#index as JSON
+  [1m[36mDonation Load (2.0ms)[0m  [1mSELECT "donations".* FROM "donations"[0m
+  Rendered donations/index.json.jbuilder (15.0ms)
+Completed 500 Internal Server Error in 39ms
+
+ActionView::Template::Error (undefined method `time' for #<Donation:0x4ccacb8>):
+    1: json.array!(@donations) do |donation|
+    2:   json.extract! donation, :id, :time, :notes, :user_id, :institution_id, :blood_group_id
+    3:   json.url donation_url(donation, format: :json)
+    4: end
+  app/views/donations/index.json.jbuilder:2:in `block in _app_views_donations_index_json_jbuilder__340647886_40201728'
+  app/views/donations/index.json.jbuilder:1:in `_app_views_donations_index_json_jbuilder__340647886_40201728'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (43.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (113.1ms)
+
+
+Started GET "/donations" for 127.0.0.1 at 2014-11-22 22:48:04 +0100
+Processing by DonationsController#index as HTML
+  [1m[35mDonation Load (1.0ms)[0m  SELECT "donations".* FROM "donations"
+  Rendered donations/index.html.erb within layouts/application (37.0ms)
+  [1m[36mInstitution Load (3.0ms)[0m  [1mSELECT  "institutions".* FROM "institutions"  WHERE "institutions"."id" = 2  ORDER BY "institutions"."id" ASC LIMIT 1[0m
+Completed 200 OK in 291ms (Views: 285.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 22:48:04 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 22:48:04 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 22:48:04 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 22:48:04 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 22:48:04 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 22:48:04 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 22:48:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 22:48:05 +0100
+
+
+Started GET "/donations.json" for 127.0.0.1 at 2014-11-22 22:50:52 +0100
+Processing by DonationsController#index as JSON
+  [1m[35mDonation Load (1.0ms)[0m  SELECT "donations".* FROM "donations"
+  Rendered donations/index.json.jbuilder (58.0ms)
+Completed 200 OK in 86ms (Views: 68.1ms | ActiveRecord: 8.0ms)

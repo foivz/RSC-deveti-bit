@@ -8,6 +8,8 @@
 </head>
 <body>
 
+
+
 <p class='notice'>
 	<% notice %>
 </p>
@@ -31,11 +33,9 @@
 		<%if institution_signed_in?%>
 			logiran si kao institucija -- <b> <%= current_institution.email %> </b>
 			<br> 
-			<%= link_to "logout", destroy_institution_session_path %>
-
-			<br>
-			<%= link_to 'svi donori', '/donori' %>
-
+			<%= link_to "logout", destroy_institution_session_path %>			<br>
+			<%= link_to 'svi donori', '/donori' %> <br>
+			<%= link_to 'zabilježi donaciju', '/donations/new' %>
 
 		<% else %>
 			<p>nisi ulogiran</p>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :donations
   resources :donors
+  resources :institutions
 
   devise_for :donors
   devise_for :institutions
@@ -14,8 +15,6 @@ Rails.application.routes.draw do
   
   get 'donor/:id' => 'donors#show'
   get 'donori' => 'donors#index'
-
-
 
 
   as :institution do

@@ -1,7 +1,6 @@
 class DonationsController < ApplicationController
   before_action :set_donation, only: [:show, :edit, :update, :destroy]
 
-
   respond_to :html, :json
 
   # GET /donations
@@ -73,6 +72,6 @@ class DonationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def donation_params
-      params.require(:donation).permit(:time, :notes, :user_id, :institution_id, :blood_group_id)
+      params.require(:donation).permit(:notes, :user_id, :institution_id, :blood_group_id)
     end
 end
