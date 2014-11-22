@@ -21,9 +21,17 @@
 <h1>
 	<% if super_admin_signed_in? %>
 		<%= current_super_admin.email %>
-<%else%>
+		<br> <%= link_to "logout", destroy_super_admin_session %>
+
+	<%if institution_signed_in?%>
+		logiran si kao institucija
+		<br> <%= link_to "logout", destroy_institution_session %>
+
+	<%else%>
 		<p>nisi ulogiran</p>
-<%end%>
+
+		<br/> <%= link_to 'log in kao institucija', new_institution_session%>
+	<%end%>
 
 </h1>
 
