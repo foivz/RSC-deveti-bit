@@ -12,25 +12,32 @@
 	<% notice %>
 </p>
 
-
 <p class='alert'>
 	<% alert %>
 </p>
+
+<h2>LINKOVI</h2>
+<ul>
+	<li> <a href="/login">Login</a></li>
+	<li> <a href="/logout">Logout</a></li>
+	<li> <a href="/registracija">Registracija</a></li>
+</ul>
+
 
 
 <h1>
 	<% if super_admin_signed_in? %>
 		<%= current_super_admin.email %>
-		<br> <%= link_to "logout", destroy_super_admin_session %>
-
-	<%if institution_signed_in?%>
-		logiran si kao institucija
-		<br> <%= link_to "logout", destroy_institution_session %>
+		<br> <%= link_to "logout", destroy_super_admin_session %>	
 
 	<%else%>
-		<p>nisi ulogiran</p>
-
-		<br/> <%= link_to 'log in kao institucija', new_institution_session%>
+			<%if institution_signed_in?%>
+				logiran si kao institucija
+				<br> <%= link_to "logout", destroy_institution_session_path %>
+			<% else %>
+				<p>nisi ulogiran</p>
+				<br/> <%= link_to 'log in kao institucija', new_institution_session_path %>
+			<% end %>
 	<%end%>
 
 </h1>
