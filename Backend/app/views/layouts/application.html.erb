@@ -25,22 +25,22 @@
 
 
 
-<h1>
-	<% if super_admin_signed_in? %>
-		<%= current_super_admin.email %>
-		<br> <%= link_to "logout", destroy_super_admin_session %>	
 
-	<%else%>
-			<%if institution_signed_in?%>
-				logiran si kao institucija
-				<br> <%= link_to "logout", destroy_institution_session_path %>
-			<% else %>
-				<p>nisi ulogiran</p>
-				<br/> <%= link_to 'log in kao institucija', new_institution_session_path %>
-			<% end %>
-	<%end%>
+<% if super_admin_signed_in? %>
+	<h1>   Logiran je <%= current_super_admin.email %> </h1>
+	<br> <%= link_to "logout", destroy_super_admin_session %>	
 
-</h1>
+<%else%>
+		<%if institution_signed_in?%>
+			logiran si kao institucija
+			<br> <%= link_to "logout", destroy_institution_session_path %>
+		<% else %>
+			<p>nisi ulogiran</p>
+			<br/> <%= link_to 'log in kao institucija', new_institution_session_path %>
+		<% end %>
+<%end%>
+
+
 
 <%= yield %>
 

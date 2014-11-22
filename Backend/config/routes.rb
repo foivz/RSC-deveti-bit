@@ -12,12 +12,12 @@ Rails.application.routes.draw do
     get 'registracija', to: 'devise/registrations#new'
   end
 
+  as :donor do
+    get 'login2', to: "devise/sessions#new"  
+    get "logout2", to: "devise/sessions#destroy"
+    get 'registracija2', to: 'devise/registrations#new'  
+  end
   
-
-
-
-
-
   root 'pages#index'
 
 
