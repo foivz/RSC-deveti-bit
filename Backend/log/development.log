@@ -8704,3 +8704,72 @@ Processing by DonorsController#show as JSON
   [1m[35mDonor Load (1.0ms)[0m  SELECT  "donors".* FROM "donors"  WHERE "donors"."id" = $1 LIMIT 1  [["id", 2]]
   Rendered donors/show.json.jbuilder (2.0ms)
 Completed 200 OK in 32ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 20:58:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 359ms (Views: 312.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 20:58:39 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 20:58:39 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 20:58:39 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:39 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:39 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:39 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:39 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:39 +0100
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-22 20:58:43 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (192.1ms)
+Completed 200 OK in 392ms (Views: 342.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/donori" for 127.0.0.1 at 2014-11-22 20:58:58 +0100
+Processing by DonorsController#index as HTML
+  [1m[35mDonor Load (3.0ms)[0m  SELECT "donors".* FROM "donors"
+  Rendered donors/index.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 277ms (Views: 266.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 20:58:58 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 20:58:59 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 20:58:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:59 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 20:58:59 +0100
