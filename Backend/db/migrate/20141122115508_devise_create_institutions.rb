@@ -1,6 +1,6 @@
-class DeviseCreateSuperAdmins < ActiveRecord::Migration
+class DeviseCreateInstitutions < ActiveRecord::Migration
   def change
-    create_table(:super_admins) do |t|
+    create_table(:institutions) do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
@@ -34,9 +34,9 @@ class DeviseCreateSuperAdmins < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :super_admins, :email,                unique: true
-    add_index :super_admins, :reset_password_token, unique: true
-    # add_index :super_admins, :confirmation_token,   unique: true
-    # add_index :super_admins, :unlock_token,         unique: true
+    add_index :institutions, :email,                unique: true
+    add_index :institutions, :reset_password_token, unique: true
+    # add_index :institutions, :confirmation_token,   unique: true
+    # add_index :institutions, :unlock_token,         unique: true
   end
 end

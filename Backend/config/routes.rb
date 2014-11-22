@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :institutions
   devise_for :super_admins
   resources :pages
 
