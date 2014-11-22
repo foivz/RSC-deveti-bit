@@ -1,0 +1,709 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 11:42:08 +0100
+
+ActiveRecord::NoDatabaseError (FATAL:  database "give_me_blood_development" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:891:in `rescue in connect'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `connect'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:51:in `restore_query_cache_settings'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:43:in `rescue in call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (105.7ms)
+  [1m[36m (62.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (78.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 11:44:37 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.1.1/lib/rails/templates/rails/welcome/index.html.erb (44.0ms)
+Completed 200 OK in 176ms (Views: 112.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 11:44:38 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.1.1/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 11:52:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (4.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.1) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (139.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePages (20141122105040)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (171.9ms)[0m  [1mCREATE TABLE "pages" ("id" serial primary key, "index" character varying(255), "about" character varying(255), "help" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141122105040"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateSuperAdmins (20141122105434)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (78.1ms)[0m  [1mCREATE TABLE "super_admins" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (46.9ms)[0m  CREATE UNIQUE INDEX  "index_super_admins_on_email" ON "super_admins"  ("email")
+  [1m[36m (31.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_super_admins_on_reset_password_token" ON "super_admins"  ("reset_password_token")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141122105434"]]
+  [1m[36m (15.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 12:01:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (4.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (4.0ms)[0m  SELECT "pages".* FROM "pages"
+  Rendered pages/index.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 10629ms
+
+ActionView::Template::Error (undefined method `current_user?' for #<#<Class:0x3673128>:0x2ba1f90>):
+    19: 
+    20: 
+    21: <h1>
+    22: 	<%= current_user.name if current_user? %>
+    23: 
+    24: </h1>
+    25: 
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__134325116_39102780'
+  app/controllers/pages_controller.rb:8:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 12:02:07 +0100
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (4.0ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 172ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x3673128>:0x51683d0>):
+    19: 
+    20: 
+    21: <h1>
+    22: 	<%= current_user.name if current_user.logged_in? %>
+    23: 
+    24: </h1>
+    25: 
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__134325116_42719640'
+  app/controllers/pages_controller.rb:8:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 12:03:35 +0100
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.0ms)[0m  SELECT "pages".* FROM "pages"
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 220ms
+
+ActionView::Template::Error (undefined method `user_signed_in?' for #<#<Class:0x3673128>:0x473d840>):
+    19: 
+    20: 
+    21: <h1>
+    22: 	<%= current_user.name if user_signed_in? %>
+    23: 
+    24: </h1>
+    25: 
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__134325116_30595764'
+  app/controllers/pages_controller.rb:8:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 12:03:37 +0100
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.0ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 177ms
+
+ActionView::Template::Error (undefined method `user_signed_in?' for #<#<Class:0x3673128>:0x52258c8>):
+    19: 
+    20: 
+    21: <h1>
+    22: 	<%= current_user.name if user_signed_in? %>
+    23: 
+    24: </h1>
+    25: 
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__134325116_30595764'
+  app/controllers/pages_controller.rb:8:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 12:04:01 +0100
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.0ms)[0m  SELECT "pages".* FROM "pages"
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 176ms
+
+ActionView::Template::Error (undefined method `user_signed_in?' for #<#<Class:0x3673128>:0x47401c8>):
+    19: 
+    20: 
+    21: <h1>
+    22: 	<% if user_signed_in? %>
+    23: 		<%= current_user.email %>
+    24: <%else%>
+    25: 		<p>nisi ulogiran</p>
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__134325116_30608772'
+  app/controllers/pages_controller.rb:8:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 12:04:13 +0100
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.0ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 160ms (Views: 160.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 12:04:13 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 12:04:13 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 12:04:13 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 12:04:13 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 12:04:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 12:04:14 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 12:04:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 12:04:14 +0100
+
+
+Started GET "/super_admins/new" for 127.0.0.1 at 2014-11-22 12:04:24 +0100
+
+ActionController::RoutingError (No route matches [GET] "/super_admins/new"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (36.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (88.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (324.1ms)
+
+
+Started GET "/super_admins/sign_up" for 127.0.0.1 at 2014-11-22 12:08:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/registrations/new.html.erb within layouts/application (261.2ms)
+Completed 200 OK in 702ms (Views: 626.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 12:08:16 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 12:08:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 12:08:16 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 12:08:16 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 12:08:16 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 12:08:16 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 12:08:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 12:08:16 +0100
+  [1m[36mSuperAdmin Load (0.0ms)[0m  [1mSELECT "super_admins".* FROM "super_admins"[0m
+
+
+Started POST "/super_admins" for 127.0.0.1 at 2014-11-22 12:09:43 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KUjzrs13JGslbMLXjaDUhbamfeA17WHiKOM6ebN/y8=", "super_admin"=>{"email"=>"admin@devetibit.hr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSuperAdmin Exists (4.0ms)[0m  [1mSELECT  1 AS one FROM "super_admins"  WHERE "super_admins"."email" = 'admin@devetibit.hr' LIMIT 1[0m
+  [1m[35mSQL (20.8ms)[0m  INSERT INTO "super_admins" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-22 11:09:44.493509"], ["email", "admin@devetibit.hr"], ["encrypted_password", "$2a$10$X8k5eIjdd14h9tuMRDqH/uMr.gznXKr5a8T2L/025iNkSvmmSvNMW"], ["updated_at", "2014-11-22 11:09:44.493509"]]
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (20.3ms)[0m  [1mUPDATE "super_admins" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "super_admins"."id" = 1[0m  [["current_sign_in_at", "2014-11-22 11:09:44.538282"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_at", "2014-11-22 11:09:44.538282"], ["last_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2014-11-22 11:09:44.542303"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 640ms (ActiveRecord: 49.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 12:09:44 +0100
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (4.0ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+  [1m[35mSuperAdmin Load (0.0ms)[0m  SELECT  "super_admins".* FROM "super_admins"  WHERE "super_admins"."id" = 1  ORDER BY "super_admins"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 320ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x541da00>:0x541ce18>):
+    20: 
+    21: <h1>
+    22: 	<% if super_admin_signed_in? %>
+    23: 		<%= current_user.email %>
+    24: <%else%>
+    25: 		<p>nisi ulogiran</p>
+    26: <%end%>
+  app/views/layouts/application.html.erb:23:in `_app_views_layouts_application_html_erb__933444937_41153892'
+  app/controllers/pages_controller.rb:8:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 12:10:00 +0100
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.0ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+  [1m[35mSuperAdmin Load (4.0ms)[0m  SELECT  "super_admins".* FROM "super_admins"  WHERE "super_admins"."id" = 1  ORDER BY "super_admins"."id" ASC LIMIT 1
+Completed 200 OK in 168ms (Views: 160.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 12:10:01 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 12:10:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 12:10:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 12:10:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 12:10:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 12:10:01 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 12:10:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 12:10:01 +0100
+
+
+Started GET "/super_admins/sign_out" for 127.0.0.1 at 2014-11-22 12:10:35 +0100
+
+ActionController::RoutingError (No route matches [GET] "/super_admins/sign_out"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (172.0ms)
+
+
+Started GET "/super_admins/sign_out" for 127.0.0.1 at 2014-11-22 12:10:58 +0100
+
+ActionController::RoutingError (No route matches [GET] "/super_admins/sign_out"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (196.0ms)
+
+
+Started GET "/super_admins/sign_out" for 127.0.0.1 at 2014-11-22 12:12:54 +0100
+
+ActionController::RoutingError (No route matches [GET] "/super_admins/sign_out"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (160.0ms)
+
+
+Started GET "/super_admins/sign_out" for 127.0.0.1 at 2014-11-22 12:13:38 +0100
+
+ActionController::RoutingError (No route matches [GET] "/super_admins/sign_out"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (184.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 12:15:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (4.0ms)[0m  SELECT "pages".* FROM "pages"
+  Rendered pages/index.html.erb within layouts/application (20.0ms)
+  [1m[36mSuperAdmin Load (4.0ms)[0m  [1mSELECT  "super_admins".* FROM "super_admins"  WHERE "super_admins"."id" = 1  ORDER BY "super_admins"."id" ASC LIMIT 1[0m
+Completed 200 OK in 520ms (Views: 448.1ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 12:15:52 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 12:15:53 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 12:15:53 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 12:15:53 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 12:15:53 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 12:15:53 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 12:15:53 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 12:15:53 +0100
+
+
+Started GET "/super_admins/sign_out" for 127.0.0.1 at 2014-11-22 12:16:04 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mSuperAdmin Load (0.0ms)[0m  SELECT  "super_admins".* FROM "super_admins"  WHERE "super_admins"."id" = 1  ORDER BY "super_admins"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 61ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 12:16:04 +0100
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (4.0ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 148ms (Views: 140.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 12:16:04 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:04 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 12:16:04 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 12:16:04 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:04 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:04 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:05 +0100
+
+
+Started GET "/super_admins/sign_in" for 127.0.0.1 at 2014-11-22 12:16:13 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (154.4ms)
+Completed 200 OK in 335ms (Views: 322.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 12:16:14 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 12:16:14 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 12:16:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:14 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:14 +0100
+
+
+Started POST "/super_admins/sign_in" for 127.0.0.1 at 2014-11-22 12:16:26 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OhUWXqRkMaktGbqrqrCO0Vzqx7eksAVOtBoP0fx0cQU=", "super_admin"=>{"email"=>"admin@devetibit.hr", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[35mSuperAdmin Load (4.0ms)[0m  SELECT  "super_admins".* FROM "super_admins"  WHERE "super_admins"."email" = 'admin@devetibit.hr'  ORDER BY "super_admins"."id" ASC LIMIT 1
+  [1m[36m (33.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "super_admins" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "super_admins"."id" = 1  [["remember_created_at", "2014-11-22 11:16:26.406002"], ["updated_at", "2014-11-22 11:16:26.443947"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (4.0ms)[0m  [1mUPDATE "super_admins" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "super_admins"."id" = 1[0m  [["current_sign_in_at", "2014-11-22 11:16:26.467927"], ["sign_in_count", 2], ["updated_at", "2014-11-22 11:16:26.471927"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 440ms (ActiveRecord: 41.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-22 12:16:26 +0100
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.0ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  [1m[35mSuperAdmin Load (4.0ms)[0m  SELECT  "super_admins".* FROM "super_admins"  WHERE "super_admins"."id" = 1  ORDER BY "super_admins"."id" ASC LIMIT 1
+Completed 200 OK in 169ms (Views: 164.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-22 12:16:26 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-22 12:16:26 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-22 12:16:27 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:27 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:27 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:27 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:27 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-22 12:16:27 +0100
