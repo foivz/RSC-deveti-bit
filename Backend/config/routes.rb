@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :donations
+
   devise_for :donors
   devise_for :institutions
   devise_for :super_admins

@@ -5,4 +5,5 @@ class Institution < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :address
+  has_many :donations
 end
