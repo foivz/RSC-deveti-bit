@@ -1,5 +1,5 @@
                          Prefix Verb   URI Pattern                           Controller#Action
-                      donations GET    /donations                  donations#index
+                      donations GET    /donations                  donations#index            
                                 POST   /donations                  donations#create
                   edit_donation GET    /donations/:id/edit         donations#edit
                        donation GET    /donations/:id              donations#show

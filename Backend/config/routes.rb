@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   devise_for :super_admins
   resources :pages
 
-  resources :institutions, except: :show ##mozda treba prebaciti ispod resources :donors, except: :show
+  resources :institutions, except: :show #mozda treba prebaciti ispod resources :donors, except: :show
   
 
 
