@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122233206) do
+ActiveRecord::Schema.define(version: 20141123014348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20141122233206) do
     t.datetime "updated_at"
     t.text     "city"
     t.text     "state"
+    t.integer  "donor_id"
+    t.integer  "institution_id"
   end
 
   create_table "blood_groups", force: true do |t|

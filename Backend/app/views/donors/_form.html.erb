@@ -51,6 +51,15 @@
     <%= f.label :date_of_last_donation %><br>
     <%= f.text_field :date_of_last_donation %>
   </div>
+
+  <%= fields_for :address, @donor.address do |address_fields| %>
+    Longitude: <%= address_fields.text_field :long %>
+    Latitude: <%= address_fields.text_field :lat %>
+    City: <%= address_fields.text_field :city %>
+    State: <%= address_fields.text_field :state %>
+  <% end %>
+
+  
   <div class="actions">
     <%= f.submit %>
   </div>
