@@ -20,9 +20,13 @@
     <string-array name="lista_za_navigaciju2">
         <item >CK ZAGREB  |  Ericsson		  |  Krapinska 45  |  24.11.2014.</item>
         <item >CK ZAGREB  |  Privredna Banka  |  Radnicka 44   |  22.07.2014.</item>
-        <item >KARLOVAC   |  G.A.			  |  Br. Radić 7   |  26.04.2014.</item>
+        <item >KARLOVAC   |  G.A.			  |  Br. Radic 7   |  26.04.2014.</item>
         <item >DARUVAR    |  G.A.			  |  Crveni Kriz   |  11.01.2014.</item>
         <item >CK ZAGREB  |  ZG-JUG			  |  Siget 18a	   |  18.07.2013.</item>
     </string-array>
-
+    
+    <string name="ime_i_prezime">"Ime i Prezime:			Z. Brkic"</string>
+	<string name="blood_group">""Blood group:			AB+"</string>
+	<string name="number_of_donations">"Number of donations:			24"</string>
+    
 </resources>

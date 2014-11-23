@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 @SuppressWarnings("deprecation")
 public class GlavniOkvir extends Activity {
@@ -31,11 +32,15 @@ public class GlavniOkvir extends Activity {
 	Adapter_za_drawer_listu adapter;
 	DrawerLayout drawer_layout;
 	ActionBarDrawerToggle drawerListener;
+	String je_register_prosli;
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.glavni_okvir);
+        
+        Intent k = getIntent();
+        je_register_prosli = k.getStringExtra("r");
         
         naslov = getTitle().toString();
         custom_font = Typeface.createFromAsset(getAssets(), "fonts/Hotel Oriental.ttf");
@@ -151,7 +156,7 @@ public class GlavniOkvir extends Activity {
     	// logika za prijenos iz jednog fragmenta u drugi
     	switch (position) {
     		case 0:
-    			fragment = new Profile(this, custom_font);
+    			fragment = new Profile(this, custom_font, je_register_prosli);
     			break;
     		case 1:
     			fragment = new Institutions(this, custom_font);

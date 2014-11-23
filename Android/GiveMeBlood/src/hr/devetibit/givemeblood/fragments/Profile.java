@@ -17,33 +17,40 @@ import com.google.gson.GsonBuilder;
 import hr.devetibit.givemeblood.R;
 import hr.devetibit.givemeblood.adapteri.Adapter_za_drawer_listu2;
 import hr.devetibit.givemeblood.entiteti.Donor;
+import android.app.Application;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Profile extends Fragment {
 	Context context;
 	Typeface custom_font;
+	String je_register_prosli;
 	ImageView user, medal;
 	TextView ime, prezime, email, note;
-	TextView krvna_grupa, broj_donacija, share;
+	TextView krvna_grupa, broj_donacija, share, ime_i_prezime;
 	ListView l;
 	Adapter_za_drawer_listu2 adapter2;
 	JsonHandler json;
 	Donor d;
 	
-	public Profile(Context context, Typeface custom_font) {
+	public Profile(Context context, Typeface custom_font, String je_register_prosli) {
 		this.context = context;
 		this.custom_font = custom_font;
+		this.je_register_prosli = je_register_prosli;
 	}
 	
 	@Override
@@ -51,29 +58,42 @@ public class Profile extends Fragment {
 		View rootView = inflater.inflate(R.layout.profil, container, false);
 		
 		user = (ImageView) rootView.findViewById(R.id.slika_user);
-		user.setImageResource(R.drawable.profilna_demonstracija);
 		medal = (ImageView) rootView.findViewById(R.id.slika_medal);
-		medal.setImageResource(R.drawable.golda);
 		// ime = (TextView) rootView.findViewById(R.id.ime);
 		// prezime = (TextView) rootView.findViewById(R.id.prezime);
 		// email = (TextView) rootView.findViewById(R.id.email);
 		// note = (TextView) rootView.findViewById(R.id.note);
 		
+		ime_i_prezime = (TextView) rootView.findViewById(R.id.note);
+		ime_i_prezime.setTextColor(Color.parseColor("#222222"));
+		ime_i_prezime.setTypeface(custom_font);
 		krvna_grupa = (TextView) rootView.findViewById(R.id.ime);
-		krvna_grupa.setText("Krvna grupa:			AB+");
 		krvna_grupa.setTextColor(Color.parseColor("#222222"));
 		krvna_grupa.setTypeface(custom_font);
 		broj_donacija = (TextView) rootView.findViewById(R.id.prezime);
-		broj_donacija.setText("Broj_donacija:			24");
 		broj_donacija.setTextColor(Color.parseColor("#222222"));
 		broj_donacija.setTypeface(custom_font);
 		share = (TextView) rootView.findViewById(R.id.email);
 		share.setText("Share achievement!			");
 		share.setTextColor(Color.parseColor("#222222"));
 		share.setTypeface(custom_font);
-		l = (ListView) rootView.findViewById(R.id.lista1);
-		adapter2 = new Adapter_za_drawer_listu2(context);
-		l.setAdapter(adapter2);
+		
+		if (je_register_prosli.trim() != "1") {
+			user.setImageResource(R.drawable.profilna_demonstracija);
+			medal.setImageResource(R.drawable.golda);
+			
+			ime_i_prezime.setText(R.string.ime_i_prezime);
+			krvna_grupa.setText(R.string.blood_group);
+			broj_donacija.setText(R.string.number_of_donations);
+			l = (ListView) rootView.findViewById(R.id.lista1);
+			adapter2 = new Adapter_za_drawer_listu2(context, custom_font);
+			l.setAdapter(adapter2);
+		}
+		else if (je_register_prosli.trim() != "0") {
+			ime_i_prezime.setText("Ime i Prezime:			");
+			krvna_grupa.setText("Blood group:			");
+			broj_donacija.setText("Number of donations:			");
+		}
 		
 		
 		// kako smo vec na LOGIN aktivnosti, saljemo direktno podatke na json

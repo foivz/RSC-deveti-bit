@@ -15,6 +15,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends Activity implements OnClickListener {
@@ -50,8 +51,16 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 		switch(v.getId()) {
 			case R.id.btn_login:
-				i = new Intent(this, GlavniOkvir.class);
-				startActivity(i);
+				if (!email.getText().toString().trim().equals("") && 
+						!password.getText().toString().trim().equals("")) {
+					i = new Intent(this, GlavniOkvir.class);
+					i.putExtra("r", "0");
+					startActivity(i);
+					finish();
+				}
+				else {
+					Toast.makeText(this, "Fill empty fields!", Toast.LENGTH_SHORT).show();
+				}
 				break;
 			case R.id.btn_register:
 				// startamo REGISTER aktivnost
