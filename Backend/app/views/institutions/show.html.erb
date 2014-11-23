@@ -1,0 +1,87 @@
+<% provide(:js_tagovi, 'http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false') %>
+
+<%= provide(:metoda, "onload=BuildGraph();") %>
+
+<h1>
+<%= @institution.email %>
+</h1>
+
+<div class="profilContent">
+        <div class="map">
+            <div id="googleMap" style="width:500px;height:380px;"></div>
+        </div>
+        <div class="podatci">
+            <p>Broj donatora koji su donirali: -varijabla-</p>
+                 <br />
+                 <dl>
+                    <dt>Trenutna status zaliha krvi u bolnici:</dt>
+                    <dd id="a"><b>A+ </b></dd>
+                    <dd id="aa"><b>A- </b></dd>
+                    <dd id="b"><b>B+ </b></dd>
+                    <dd id="bb"><b>B- </b></dd>
+                    <dd id="ab"><b>AB+ </b></dd>
+                    <dd id="aabb"><b>AB- </b></dd>
+                    <dd id="o"><b>0+ </b></dd>
+                    <dd id="oo"><b>0- </b></dd>
+                </dl>
+        </div>
+</div>
+
+<br>
+<script>
+    function initialize() {
+        var mapProp = {
+            center: new google.maps.LatLng(43.508742, 16.450850),
+            zoom: 12,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var myCenter = new google.maps.LatLng(43.508742, 16.450850);
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+        var marker = new google.maps.Marker({
+            position: myCenter,
+            title: 'Click to zoom'
+        });
+
+        marker.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    function RandomArr(){
+        var numArr = [];
+        var i;
+        for(i=0;i<8;i++)
+        {
+            var r = Math.random();
+            numArr.push(r);
+        }
+        return numArr;
+    }
+
+    function GraphFitting(){
+        var i, n = 0;
+        var p = [];
+        for(i=1; i<arguments.length; i++){
+            n += arguments[i];
+        }
+        for(i=1;i<arguments.length; i++){
+            p.push(arguments[i] / n);
+        }
+        return p;
+    }
+
+    function BuildGraph(){
+        var numArr = RandomArr();
+        var percArr = GraphFitting(numArr);
+        document.getElementById("a").style.width = 5 + "%";
+        document.getElementById("aa").style.width = 6 + "%";
+        document.getElementById("b").style.width = 66 + "%";
+        document.getElementById("bb").style.width = 45 + "%";
+        document.getElementById("ab").style.width = 30 + "%";
+        document.getElementById("aabb").style.width = 28 + "%";
+        document.getElementById("o").style.width = 22 + "%";
+        document.getElementById("oo").style.width = 78 + "%";
+    }
+    
+
+</script>

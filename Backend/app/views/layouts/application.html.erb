@@ -21,28 +21,13 @@
 	<% alert %>
 </p>
 
-<% if super_admin_signed_in? %>
-	<h1>   Logiran je <%= current_super_admin.email %> </h1>
-	<br> <%= link_to "logout", destroy_super_admin_session %>	
+<div class="sadrzaj">
+		
+	<%= yield %>
+	
+</div>
 
-<%else%>
-		<%if institution_signed_in?%>
-			logiran si kao institucija -- <b> <%= current_institution.email %> </b>
-			<br> 
-			<%= link_to "logout", destroy_institution_session_path %>			<br>
-			<%= link_to 'svi donori', '/donori' %> <br>
-			<%= link_to 'zabilježi donaciju', '/donations/new' %>
-
-		<% else %>
-			<p>nisi ulogiran</p>
-		<% end %>
-<%end%>
-
-
-
-<%= yield %>
-
-
+<br/> <br/> <br/><br/>
 <%= render 'layouts/footer' %>
 
 </body>

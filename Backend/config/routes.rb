@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :pages
 
   
-  resources :institutions
+  resources :institutions ##mozda treba prebaciti ispod resources :donors, except: :show
 
 
   #RUTE ZA DONACIJE

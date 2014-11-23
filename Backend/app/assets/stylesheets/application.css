@@ -26,7 +26,15 @@ body {
 
     text-align: center;
     background-color: #f4695b;
+    height:30px;
+    width:100%;
 
+
+}
+
+.sadrzaj{
+	height:400px;
+	width:100%;
 }
 
 /*HEADER INSTITUCIJA*/
