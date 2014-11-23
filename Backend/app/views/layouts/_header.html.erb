@@ -1,0 +1,32 @@
+<header>
+<div id="navigation">
+<div class="arrows">
+	<span class="ar-left"></span>
+	<span class="ar-right"></span>
+	<span class="ar-left2"></span>
+	<span class="ar-right2"></span>
+</div> 
+
+<div class="dark-color">
+<div class="light-color">
+<a href="#" id="logo">Give Me Blood</a>
+<nav>
+	<ul>
+
+	<% if institution_signed_in? %>
+		<li><a href="#" class="active-menu"> <%= current_institution.email %>  </a></li>
+		<li><a href="/donacije">Pregled donora</a></li>
+		<li><a href="#">Statistika</a></li>
+		<li><a href="#">Postavke</a></li>
+		<li> <a href="/logout">Logout</a></li>	 
+	<% else %>
+		<li> <a href="/login">Login</a></li>	
+		<li> <a href="/registracija">Registracija</a></li>
+
+	<% end %>
+	</ul>
+</nav>
+</div>
+</div>
+</div>
+</header>

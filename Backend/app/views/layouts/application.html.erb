@@ -5,10 +5,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+ <script src=<%= yield(:js_tagovi)%>   /> </script>
+
 </head>
-<body>
+<body  <%=yield(:metoda)%>  >
 
-
+<%= render 'layouts/header' %>
 
 <p class='notice'>
 	<% notice %>
@@ -17,13 +20,6 @@
 <p class='alert'>
 	<% alert %>
 </p>
-
-<h2>LINKOVI</h2>
-<ul>
-	<li> <a href="/login">Login</a></li>
-	<li> <a href="/logout">Logout</a></li>
-	<li> <a href="/registracija">Registracija</a></li>
-</ul>
 
 <% if super_admin_signed_in? %>
 	<h1>   Logiran je <%= current_super_admin.email %> </h1>
@@ -45,6 +41,9 @@
 
 
 <%= yield %>
+
+
+<%= render 'layouts/footer' %>
 
 </body>
 </html>
