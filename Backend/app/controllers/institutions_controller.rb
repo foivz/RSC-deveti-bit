@@ -10,6 +10,8 @@ class InstitutionsController < ApplicationController
   # GET /institutions/1
   # GET /institutions/1.json
   def show
+    id = params[:id]
+    @donations = Donation.where(institution_id: id)
   end
 
   # GET /institutions/new
@@ -28,7 +30,7 @@ class InstitutionsController < ApplicationController
 
     respond_to do |format|
       if @institution.save
-        format.html { redirect_to @institution, notice: 'Institution was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Institution was successfully created.' }
         format.json { render :show, status: :created, location: @institution }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class InstitutionsController < ApplicationController
   def update
     respond_to do |format|
       if @institution.update(institution_params)
-        format.html { redirect_to @institution, notice: 'Institution was successfully updated.' }
+        format.html { redirect_to root_url, notice: 'Institution was successfully updated.' }
         format.json { render :show, status: :ok, location: @institution }
       else
         format.html { render :edit }

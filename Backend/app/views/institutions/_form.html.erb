@@ -12,22 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label 'Ime' %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :low_level %><br>
+    <%= f.label 'Alarmantna razina [u dozama]' %><br>
     <%= f.text_field :low_level %>
   </div>
 
   <%= fields_for :address, @institution.address do |address_fields| %>
-    Longitude: <%= address_fields.text_field :long %>
-    Latitude: <%= address_fields.text_field :lat %>
-    City: <%= address_fields.text_field :city %>
-    State: <%= address_fields.text_field :state %>
+    Grad: <br> <%= address_fields.text_field :city %> <br>
+    Država: <br> <%= address_fields.text_field :state %><br/>
   <% end %>
 
-
+<br>
   <div class="actions">
     <%= f.submit %>
   </div>

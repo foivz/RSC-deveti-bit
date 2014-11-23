@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  resources :donations
-  resources :donors, except: :show
+  resources :donations  resources :donors, except: :show
+  
 
   devise_for :donors
   devise_for :institutions
   devise_for :super_admins
   resources :pages
 
+  resources :institutions, except: :show ##mozda treba prebaciti ispod resources :donors, except: :show
   
-  resources :institutions ##mozda treba prebaciti ispod resources :donors, except: :show
 
 
   #RUTE ZA DONACIJE
@@ -16,7 +16,11 @@ Rails.application.routes.draw do
   get 'dodaj' => 'donations#new'
   
   get 'donor/:id' => 'donors#show'
+  get 'donors/:id' => 'donors#show'
   get 'donori' => 'donors#index'
+
+  get 'statistika' => 'pages#stats'
+  get 'pregled' => 'donors#index'
 
 
   as :institution do

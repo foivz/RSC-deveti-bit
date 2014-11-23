@@ -1,1 +1,41 @@
+
+
+<% if institution_signed_in? %>
+		
+	<% if !current_institution.name? %>
+		<div class="center">
+			<h3> Prvo morate unijeti naziv organizacije  </h3>
+			<h3><a href=<%= "/institutions/" +  current_institution.id.to_s + "/edit" %>>ok.</a></h3>
+		</div>
+
+	<% else %>
+
+
+	<ul>
+		<li><a href="dodaj">Zabilježi donaciju</a></li>
+	</ul>
 	
+
+	
+
+
+	<%end %>
+
+
+<% else %>
+
+
+<div class='center'>
+	<h2>
+		<%= @count.to_s%> doza krvi donirano. <br>
+		Ukupno <%= @liters %> litara.
+	</h2>
+	<h3><a href="registracija">Pridruži se i ti</a></h3>
+	<h3><a href="login">ili se logiraj</a></h3>
+
+</div>
+
+<% end %>
+
+
+

@@ -9,15 +9,16 @@
 
 <div class="dark-color">
 <div class="light-color">
-<a href="#" id="logo">Give Me Blood</a>
+<a href="/" id="logo">Give Me Blood</a>
 <nav>
 	<ul>
 
 	<% if institution_signed_in? %>
-		<li><a href="#" class="active-menu"> <%= current_institution.email %>  </a></li>
-		<li><a href="/donacije">Pregled donora</a></li>
-		<li><a href="#">Statistika</a></li>
-		<li><a href="#">Postavke</a></li>
+		<li><a href="#" class="active-menu"> <%= current_institution.name || current_institution.email %>  </a></li>
+		<li><a href="/donacije">Pregled svih donacija</a></li>
+		<li><a href="/pregled">Pregled svih korisnika</a></li>
+		<li><a href="/statistika">Statistika</a></li>
+		<li> <a href=<%= "/institutions/" +  current_institution.id.to_s + "/edit" %> >  Postavke</a></li>
 		<li> <a href="/logout">Logout</a></li>	 
 	<% else %>
 		<li> <a href="/login">Login</a></li>	

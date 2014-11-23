@@ -4,8 +4,18 @@ class PagesController < ApplicationController
   respond_to :html
 
   def index
-    @pages = Page.all
+
+    @count = Donation.all.count
+    @liters = (@count * 0.4).round(2)
+
     respond_with(@pages)
+  end
+
+  def stats
+        @count = Donation.all.count
+        @liters = (@count * 0.4).round(2)
+
+
   end
 
   def show
