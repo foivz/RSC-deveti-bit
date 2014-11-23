@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :donations  resources :donors, except: :show
+  resources :donations  
+  resources :donors, except: :show
+  resources :blood_groups
   
 
   devise_for :donors
@@ -21,7 +23,13 @@ Rails.application.routes.draw do
 
   get 'statistika' => 'pages#stats'
   get 'pregled' => 'donors#index'
+  get 'institucije' => 'institutions#index'
 
+
+  as :super_admin do
+    get "super_admin_login", to: "devise/sessions#new"
+    get '123', to: 'devise/registrations#new'
+  end
 
   as :institution do
     get "login", to: "devise/sessions#new"

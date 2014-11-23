@@ -14,26 +14,42 @@
 	<ul>
 		<li><a href="dodaj">Zabilježi donaciju</a></li>
 	</ul>
-	
 
-	
 
 
 	<%end %>
 
 
+
 <% else %>
 
+	<%if super_admin_signed_in? %>
 
-<div class='center'>
-	<h2>
-		<%= @count.to_s%> doza krvi donirano. <br>
-		Ukupno <%= @liters %> litara.
-	</h2>
-	<h3><a href="registracija">Pridruži se i ti</a></h3>
-	<h3><a href="login">ili se logiraj</a></h3>
 
-</div>
+		<div class='center nostyle'>
+			<ul>
+				
+				<li><a href="/donacije">Administracija donacija</a>            </li>
+				<li><a href="/pregled">Administracija korisnika</a>            </li>
+				<li><a href="/institucije">Administracija institucija</a>      </li>
+				<li><a href="/statistika">Statistika</a></li>
+			</ul>
+
+		</div>
+
+
+	<% else %>
+			<div class='center'>
+				<h2>
+					<%= @count.to_s%> doza krvi donirano. <br>
+					Ukupno <%= @liters %> litara.
+				</h2>
+				<h3><a href="registracija">Pridruži se i ti</a></h3>
+				<h3><a href="login">ili se logiraj</a></h3>
+
+			</div>
+			
+	<% end %>
 
 <% end %>
 

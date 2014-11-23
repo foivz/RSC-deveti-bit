@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Give Me Blood</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string-array name="lista_za_navigaciju">
+        <item >PROFILE</item>
+        <item >INSTITUTIONS</item>
+        <item >STATISTICS</item>
+        <item >SETINGS</item>
+        <item >SHARE</item>
+    </string-array>
+    
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
+    <string name="message_text">Pregled donacija kroz godine</string>
+    
+    <string-array name="lista_za_navigaciju2">
+        <item >CK ZAGREB  |  Ericsson		  |  Krapinska 45  |  24.11.2014.</item>
+        <item >CK ZAGREB  |  Privredna Banka  |  Radnicka 44   |  22.07.2014.</item>
+        <item >KARLOVAC   |  G.A.			  |  Br. Radić 7   |  26.04.2014.</item>
+        <item >DARUVAR    |  G.A.			  |  Crveni Kriz   |  11.01.2014.</item>
+        <item >CK ZAGREB  |  ZG-JUG			  |  Siget 18a	   |  18.07.2013.</item>
+    </string-array>
+
+</resources>

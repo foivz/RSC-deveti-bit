@@ -1,0 +1,9 @@
+ <tr>
+        <td><%= donation.notes %></td>
+        <td><%= donation.user_id %></td>
+        <td><%= donation.institution_id %></td>
+        <td><%= donation.blood_group_id %></td>
+        <td><%= link_to 'Show', donation %></td>
+        <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
+        <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

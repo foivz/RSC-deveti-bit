@@ -7,7 +7,7 @@ class DonationsController < ApplicationController
   # GET /donations.json
   def index
     @donations = Donation.all
-  end
+  end 
 
   # GET /donations/1
   # GET /donations/1.json

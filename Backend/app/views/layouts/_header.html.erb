@@ -20,6 +20,13 @@
 		<li><a href="/statistika">Statistika</a></li>
 		<li> <a href=<%= "/institutions/" +  current_institution.id.to_s + "/edit" %> >  Postavke</a></li>
 		<li> <a href="/logout">Logout</a></li>	 
+	<% elsif super_admin_signed_in? %>
+		<li><a href="/" class="active-menu"> SUPERADMIN   </a>         </li>
+		<li><a href="/donacije">Administracija donacija</a>            </li>
+		<li><a href="/pregled">Administracija korisnika</a>            </li>
+		<li><a href="/institucije">Administracija institucija</a>      </li>
+		<li><a href="/statistika">Statistika</a></li>
+
 	<% else %>
 		<li> <a href="/login">Login</a></li>	
 		<li> <a href="/registracija">Registracija</a></li>

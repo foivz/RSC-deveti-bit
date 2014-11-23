@@ -1,0 +1,25 @@
+                         Prefix Verb   URI Pattern                           Controller#Action
+                      donations GET    /donations                  donations#index
+                                POST   /donations                  donations#create
+                  edit_donation GET    /donations/:id/edit         donations#edit
+                       donation GET    /donations/:id              donations#show
+                                PATCH  /donations/:id              donations#update
+                                PUT    /donations/:id              donations#update
+                                DELETE /donations/:id              donations#destroy
+
+                         donors GET    /donors                     donors#index
+                                POST   /donors                     donors#create
+                                PUT    /donors/:id                 donors#update
+                                DELETE /donors/:id                 donors#destroy
+                  donor_session POST   /donors/sign_in             devise/sessions#create
+                 donor_password POST   /donors/password            devise/passwords#create
+             new_donor_password GET    /donors/password/new        devise/passwords#new
+                                PUT    /donors/password            devise/passwords#update
+
+            institution_session POST   /institutions/sign_in       devise/sessions#create
+                                PUT    /institutions/password      devise/passwords#update
+                   institutions GET    /institutions               institutions#index
+                                POST   /institutions               institutions#create
+               edit_institution GET    /institutions/:id/edit      institutions#edit
+                                PUT    /institutions/:id           institutions#update
+                                DELETE /institutions/:id           institutions#destroy

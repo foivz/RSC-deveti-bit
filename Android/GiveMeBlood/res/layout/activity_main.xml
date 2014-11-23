@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/background_2"
+    android:orientation="vertical" >
+    
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="220dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="5dp"
+        android:hint="email"
+        android:background="@drawable/edit_text_selector"
+        android:paddingLeft="15dp" />
+
+    <EditText
+    	android:id="@+id/password"
+        android:layout_width="220dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:hint="password"
+        android:background="@drawable/edit_text_selector"
+        android:paddingLeft="15dp" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="220dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="35dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_big_selector"
+        android:text="Login" />
+    
+    <TextView
+        android:id="@+id/link_to_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:textColor="#0000ee"
+        android:layout_marginBottom="20dp"
+        android:text="Forgot your password?" />
+
+    <ImageView
+        android:layout_width="216dp"
+        android:layout_height="34dp"
+        android:src="@drawable/fb" />
+
+    <ImageView
+        android:layout_width="216dp"
+        android:layout_height="34dp"
+        android:src="@drawable/google_plus" />
+    
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="220dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="35dp"
+        android:textColor="#f01a1a"
+        android:background="@drawable/button_ordinary_selector"
+        android:text="Register" />    
+
+</LinearLayout>

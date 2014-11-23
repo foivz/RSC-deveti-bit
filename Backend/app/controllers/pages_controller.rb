@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
     @count = Donation.all.count
     @liters = (@count * 0.4).round(2)
-
+    @donations = Donation.all
     respond_with(@pages)
   end
 

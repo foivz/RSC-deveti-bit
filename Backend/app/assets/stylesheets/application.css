@@ -13,6 +13,15 @@
  *= require_self
  */
 /*FOOTER*/
+.form{
+	margin:0 auto;
+}
+
+.nostyle li{
+	font-size:300%;
+	line-height: 50px;
+	list-style-type: none;
+}
 body {
 
     width: 100%;
