@@ -4,16 +4,25 @@
 		
 	<% if !current_institution.name? %>
 		<div class="center">
-			<h3> Prvo morate unijeti naziv organizacije  </h3>
-			<h3><a href=<%= "/institutions/" +  current_institution.id.to_s + "/edit" %>>ok.</a></h3>
+			<h3> Preporučamo da dodate naziv organizacije i lokaciju.</h3>
+			<h3><a href=<%= "/institutions/" +  current_institution.id.to_s + "/edit" %>>dodaj</a></h3>
 		</div>
 
 	<% else %>
 
 
-	<ul>
-		<li><a href="dodaj">Zabilježi donaciju</a></li>
-	</ul>
+	<div class='center nostyle'>
+			<ul>
+				
+				<li><a href="/donacije">Pregled svih donacija</a>            </li>
+				<li><a href="/pregled">Pregled svih korisnika</a>            </li>
+				<li><a href=<%= "/institutions/" +  current_institution.id.to_s + "/edit" %>>Postavke organizacije</a>      </li>
+				<li><a href="/statistika">Statistika</a></li>
+				<li><a href="/logout">Odjava</a></li>
+				
+			</ul>
+
+		</div>
 
 
 

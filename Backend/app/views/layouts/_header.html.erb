@@ -14,7 +14,7 @@
 	<ul>
 
 	<% if institution_signed_in? %>
-		<li><a href="#" class="active-menu"> <%= current_institution.name || current_institution.email %>  </a></li>
+		<li><a href=<%= "/institucije/" +  current_institution.id.to_s %>  class="active-menu"> <%= current_institution.name || current_institution.email %>  </a></li>
 		<li><a href="/donacije">Pregled svih donacija</a></li>
 		<li><a href="/pregled">Pregled svih korisnika</a></li>
 		<li><a href="/statistika">Statistika</a></li>
@@ -24,7 +24,7 @@
 		<li><a href="/" class="active-menu"> SUPERADMIN   </a>         </li>
 		<li><a href="/donacije">Administracija donacija</a>            </li>
 		<li><a href="/pregled">Administracija korisnika</a>            </li>
-		<li><a href="/institucije">Administracija institucija</a>      </li>
+		<li><a href="/institutions">Administracija institucija</a>      </li>
 		<li><a href="/statistika">Statistika</a></li>
 
 	<% else %>

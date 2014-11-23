@@ -2,19 +2,23 @@
 
 <%= provide(:metoda, "onload=BuildGraph();") %>
 
-<h1>
-<%= @institution.email %>
-</h1>
+<div class='center2'>
+   <h1>
+        <%= @institution.name || @institution.email %>
+    </h1> 
+
+</div>
+
 
 <div class="profilContent">
         <div class="map">
             <div id="googleMap" style="width:500px;height:380px;"></div>
         </div>
         <div class="podatci">
-            <p>Broj donatora koji su donirali: -varijabla-</p>
+            <p>Broj donatora koji su donirali: <b> 14</b></p>
                  <br />
                  <dl>
-                    <dt>Trenutna status zaliha krvi u bolnici:</dt>
+                    <dt>Trenutna status zaliha krvi:</dt>
                     <dd id="a"><b>A+ </b></dd>
                     <dd id="aa"><b>A- </b></dd>
                     <dd id="b"><b>B+ </b></dd>

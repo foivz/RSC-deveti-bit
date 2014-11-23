@@ -1,12 +1,14 @@
-<h1>Listing donations</h1>
+<div class='centriraj'>
+  
+<h1>Popis svih donacija</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Notes</th>
-      <th>User</th>
-      <th>Institution</th>
-      <th>Blood group</th>
+      <th>Bilješka</th>
+      <th>Korisnik_id</th>
+      <th>Institucija_id</th>
+      <th>Krvna grupa_id</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,13 +16,14 @@
   <tbody>
     <% @donations.each do |donation| %>
       <tr>
-        <td><%= donation.notes %></td>
+        <td><%= link_to donation.notes, donation %></td>
         <td><%= donation.user_id %></td>
         <td><%= donation.institution_id %></td>
         <td><%= donation.blood_group_id %></td>
-        <td><%= link_to 'Show', donation %></td>
-        <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
-        <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if super_admin_signed_in? %>
+          <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
+          <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -29,3 +32,6 @@
 <br>
 
 <%= link_to 'New Donation', new_donation_path %>
+
+
+</div>

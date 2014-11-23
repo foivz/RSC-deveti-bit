@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get 'statistika' => 'pages#stats'
   get 'pregled' => 'donors#index'
-  get 'institucije' => 'institutions#index'
+  get 'institucije/:id' => 'institutions#show'
 
 
   as :super_admin do
